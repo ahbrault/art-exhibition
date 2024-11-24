@@ -49,54 +49,37 @@ const WorkPreview = () => {
 
     const [muted, setMuted] = useState(true);
 
-    const audioRef = useRef<HTMLAudioElement>(null);
-    const playerRef = useRef(null);
-
-    const simulateKeyPress = () => {
-        // Créer un événement clavier pour la touche "Espace"
-        const keyEvent = new KeyboardEvent("keydown", {
-            key: " ", // Touche espace
-            code: "Space",
-            keyCode: 32, // Code ASCII pour la touche espace
-            bubbles: true,
-            cancelable: true,
-        });
-
-        // Déclencher l'événement sur le document
-        document.body.dispatchEvent(keyEvent);
-    };
+    const playerRef = useRef<ReactPlayer>(null);
 
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.play().catch((error) => {
-                console.error("Impossible de lire l'audio :", error);
-            });
-        }
-    }, []);
-
-    useEffect(() => {
-        const simulateKeyPress = () => {
+        const simulateKeyPress = (): void => {
+            // Création d'un événement clavier simulé
             const keyEvent = new KeyboardEvent("keydown", {
                 key: " ", // Touche espace
                 code: "Space",
-                keyCode: 32,
+                keyCode: 32, // Code ASCII pour la touche espace
                 bubbles: true,
                 cancelable: true,
             });
 
+            // Déclencher l'événement sur le document
             document.body.dispatchEvent(keyEvent);
 
-            // Tentative d'unmute après la simulation
+            // Tentative d'activer le son après la simulation
             setTimeout(() => {
                 if (playerRef.current) {
-                    // @ts-ignore
-                    playerRef.current.getInternalPlayer().unMute();
+                    const internalPlayer = playerRef.current.getInternalPlayer() as any;
+                    if (internalPlayer && typeof internalPlayer.unMute === "function") {
+                        internalPlayer.unMute(); // Désactive le mute
+                    }
                 }
-            }, 2000);
+            }, 1000);
         };
 
+        // Simule l'appui sur une touche après un délai
         setTimeout(simulateKeyPress, 1000);
     }, []);
+
     if (!artwork)
         return;
 
@@ -168,13 +151,13 @@ const WorkPreview = () => {
                                     loop={true}
                                     controls={false}
                                     volume={0.5}
-                                    muted={muted} // Non muet
-                                    onPlay={() => {
-                                        simulateKeyPress();
-                                        setTimeout(() => {
-                                            setMuted(false)
-                                        }, 1000)
-                                    }}
+                                    muted={true} // Non muet
+                                    // onPlay={() => {
+                                    //     simulateKeyPress();
+                                    //     setTimeout(() => {
+                                    //         setMuted(false)
+                                    //     }, 1000)
+                                    // }}
                                     // style={{ display: 'none' }} // Cache la vidéo
                                 />
                                 <p className="opacity-0 animate-fade-in text-left uppercase text-center mt-16">
