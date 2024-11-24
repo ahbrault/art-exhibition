@@ -47,8 +47,6 @@ const WorkPreview = () => {
         };
     }, []);
 
-    const [muted, setMuted] = useState(true);
-
     const playerRef = useRef<ReactPlayer>(null);
 
     useEffect(() => {
@@ -68,7 +66,8 @@ const WorkPreview = () => {
             // Tentative d'activer le son après la simulation
             setTimeout(() => {
                 if (playerRef.current) {
-                    const internalPlayer = playerRef.current.getInternalPlayer() as any;
+                    //  @typescript-eslint/no-explicit-any
+                    const internalPlayer = playerRef.current.getInternalPlayer();
                     if (internalPlayer && typeof internalPlayer.unMute === "function") {
                         internalPlayer.unMute(); // Désactive le mute
                     }
