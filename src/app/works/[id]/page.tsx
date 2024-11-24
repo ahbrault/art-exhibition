@@ -146,7 +146,7 @@ const WorkPreview = () => {
                                 {/*/>*/}
                                 <ReactPlayer
                                     ref={playerRef}
-                                    url={artwork.youtubeLink} // Remplacez par votre URL
+                                    url={artwork.youtubeLink}
                                     playing={true}
                                     loop={true}
                                     controls={false}
