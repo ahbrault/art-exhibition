@@ -16,7 +16,8 @@
     "next": "14.2.18",
     "postcss-nested": "^7.0.2",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-player": "^2.16.0"
   },
   "devDependencies": {
     "@types/node": "^20",

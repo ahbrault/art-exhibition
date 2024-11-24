@@ -144,6 +144,10 @@ figcaption {
     line-height: 150%;
 }
 
+.taviraj {
+    font-family: 'Taviraj', 'Creato Display', 'Inter', sans-serif;
+}
+
 @media screen and (max-width: 991px) {
     h1 {
         font-size: 62px;
