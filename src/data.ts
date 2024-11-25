@@ -174,11 +174,54 @@ export const artworks: Artwork[] = [
     ],
     subTitle: "Le Pouvoir de l'Invisible",
     subDescription: [
-      'Derrière chaque trait de peinture de Jean Marc Larhantec se cache une vibration, une onde invisible. Pour cet artiste, la peinture va au-delà de la matière : c\'est une énergie, une fréquence qu\'il transmet au monde. Par cette exposition, il révèle un aperçu de ces fréquences secrètes qui constituent notre univers et nous invite à ressentir les forces invisibles qui nous entourent, unissant l’art et la nature dans un dialogue intuitif.',
+      "Derrière chaque trait de peinture de Jean Marc Larhantec se cache une vibration, une onde invisible. Pour cet artiste, la peinture va au-delà de la matière : c'est une énergie, une fréquence qu'il transmet au monde. Par cette exposition, il révèle un aperçu de ces fréquences secrètes qui constituent notre univers et nous invite à ressentir les forces invisibles qui nous entourent, unissant l’art et la nature dans un dialogue intuitif.",
     ],
-    nextPaintingText: 'Poursuivez votre visite en vous dirigeant vers le prochain tableau.',
+    nextPaintingText:
+      'Poursuivez votre visite en vous dirigeant vers le prochain tableau.',
     image: '/works/i-believe-in-you/i-believe-in-you-paint.png',
     subImage: '/works/i-believe-in-you/i-believe-in-you-image.png',
     audioPath: '/works/i-believe-in-you/i-believe-in-you-music.mp3',
+  },
+  {
+    id: 9,
+    title: 'Transhumance',
+    frequency: '(432 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      "Dans Transhumance, Jean Marc Larhantec explore le vertige du passage vers une nouvelle phase de vie, ce moment fragile et intense où l’on quitte un environnement familier, une culture, ou une relation proche pour s'aventurer dans l'inconnu. Inspirée par la chanson de Led Zeppelin Babe I'm Gonna Leave You, cette œuvre capture l’émotion d’un départ nécessaire, entre mélancolie et courage.",
+      'Les nuances sombres et vertes de la toile évoquent la terre, la faune et la flore, symbolisant le lien fondamental entre la vie humaine et la nature. Ce passage, tel un changement de saison, fait écho aux cycles de la vie, où tout départ ouvre la voie à une régénération. Les motifs et textures de la toile semblent incarner les mouvements naturels de la vie, comme un paysage en transformation perpétuelle.',
+      "Résonnant autour d’une fréquence harmonisante de 432 Hz, Transhumance capte l’essence d’une introspection profonde et apaisante. Comme la musique de Led Zeppelin, cette œuvre invite le spectateur à contempler l’équilibre fragile entre enracinement et évolution, la puissance de la terre et le besoin d'exploration. En embrassant ce changement, Jean Marc nous rappelle que, tout comme la nature, nous sommes en constante transformation.",
+    ],
+    subTitle: 'Symphonie Universelle',
+    subDescription: [
+      'Jean Marc Larhantec capte dans chaque toile la symphonie du monde, puisant son inspiration dans les fréquences de la lumière, de la musique, et de la matière. Pour lui, chaque geste est un écho de cette harmonie universelle qui relie tous les êtres. Cette exposition est une invitation à se laisser emporter dans cette mélodie visuelle où tout est vibration, où chaque couleur et chaque forme résonnent avec l’univers.',
+    ],
+    nextPaintingText:
+      "Continuez l'expérience en avançant vers le tableau suivant.",
+    image: '/works/transhumance/transhumance-paint.png',
+    subImage: '/works/transhumance/transhumance-image.png',
+    audioPath: '/works/transhumance/transhumance-music.mp3',
+  },
+  {
+    id: 10,
+    title: 'Elon is playing with Evil',
+    frequency: '(963 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.AcryliqueModelingPaste,
+    description: [
+      'Créée sous l’effet d’une vive émotion, Elon is Playing with Evil incarne la colère et la frustration de Jean Marc Larhantec face à la puissance démesurée de certaines figures de notre époque. Inspiré par la beauté poétique des correspondances entre Albert Camus et Maria Casarès, lues par Isabelle Adjani et Lambert Wilson dans Notre éternel été sur France Culture, l’artiste se plongeait dans un moment de grâce littéraire et d’humanité lorsque tout fut interrompu par une notification sur son téléphone : un tweet de Elon Musk. Cette irruption brutale symbolise pour Jean Marc l’intrusion du matérialisme et du cynisme dans un monde qui devrait être empli de poésie et de valeurs humaines.',
+      'Ce tableau, avec ses teintes vives de rouge et de jaune, évoque l’intensité de la rage et du ressentiment. Le rouge et le noir se mêlent pour symboliser le conflit entre la passion humaine et les forces froides de la technologie et de l’argent. L’arc dynamique de couleurs suggère un mouvement d’affrontement, une lutte entre le pouvoir déshumanisé et les aspirations profondes de l’âme. Pour accompagner cette œuvre, Jean Marc a choisi le titre I\'m So Tired de Fugazi, une chanson empreinte de lassitude et de frustration face à un monde en perte de repères. En résonance avec la fréquence de 963 Hz, connue pour élever l’esprit et reconnecter avec l’univers, cette composition amplifie le message de l’œuvre. Cette fréquence, parfois surnommée la "fréquence de l’éveil", évoque la nécessité de se recentrer sur des valeurs essentielles, loin de la course effrénée pour le pouvoir.',
+      'Avec Elon is Playing with Evil, Jean Marc Larhantec lance un appel à la conscience collective : l’argent et la domination technologique ne doivent pas être le but ultime de l’humanité. L’artiste nous rappelle que "Love is All, All is Love", et que la poésie, l’amour et l’empathie doivent reprendre leur place centrale dans nos vies.',
+    ],
+    subTitle: 'Un Art de l’Intuition',
+    subDescription: [
+      'Jean Marc Larhantec laisse la musique et la vibration guider chaque geste sur la toile, atteignant une spontanéité libérée de toute convention artistique. Inspiré par l’écoute intérieure, il puise dans les fréquences profondes de la vie pour créer des œuvres intuitives, où chaque forme et chaque couleur semblent flotter et résonner dans l’espace. Cette exposition nous invite à ressentir les impulsions vibratoires de l’univers, traduites dans un langage pictural unique.',
+    ],
+    nextPaintingText:
+      "Avancez vers le tableau suivant pour continuer la découverte.",
+    image: '/works/elon-is-playing/elon-is-playing-paint.png',
+    subImage: '/works/elon-is-playing/elon-is-playing-image.png',
+    audioPath: '/works/elon-is-playing/elon-is-playing-music.mp3',
   },
 ];
