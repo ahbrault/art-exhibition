@@ -4,27 +4,25 @@ import React, { useEffect, useRef, useState } from 'react';
 import { IoPauseOutline, IoPlayOutline } from 'react-icons/io5';
 
 interface AudioPlayerProps {
-  audioSrc: string; // URL du fichier audio
+  audioSrc: string;
 }
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true); // Initialise à `true` pour commencer la lecture
+  const [isPlaying, setIsPlaying] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
     if (!audioRef.current) return;
 
-    // Lecture automatique lorsque le composant est monté
     audioRef.current.play().catch((err) => {
       console.warn('Erreur lors du démarrage de la lecture automatique:', err);
     });
 
-    setIsPlaying(true); // Met à jour l'état pour refléter la lecture
+    setIsPlaying(true);
   }, []);
 
-  // Lecture/Pause
   const togglePlay = () => {
     if (!audioRef.current) return;
 
@@ -38,22 +36,19 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
     setIsPlaying(!isPlaying);
   };
 
-  // Met à jour la barre de progression
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
     setCurrentTime(audioRef.current.currentTime);
   };
 
-  // Permet à l'utilisateur de se déplacer dans la musique
   const handleSeek = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!audioRef.current) return;
 
     const newTime = parseFloat(event.target.value);
     audioRef.current.currentTime = newTime;
-    setCurrentTime(newTime); // Met à jour la barre pour refléter la position actuelle
+    setCurrentTime(newTime);
   };
 
-  // Initialisation des données audio
   useEffect(() => {
     if (!audioRef.current) return;
 
@@ -84,7 +79,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
           <button
             type='button'
             onClick={togglePlay}
-            className='pointer rounded-bl-lg rounded-tl-lg bg-dark p-2 text-light'
+            className='cursor-pointer rounded-bl-lg rounded-tl-lg bg-dark p-2 text-light'
           >
             {isPlaying ? <IoPauseOutline /> : <IoPlayOutline />}
           </button>
@@ -114,7 +109,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
                   onChange={handleSeek}
                   className='relative h-1 w-full cursor-pointer appearance-none bg-slate-100'
                   style={{
-                    accentColor: 'transparent', // Cache le style natif du curseur
+                    accentColor: 'transparent',
                   }}
                 />
               </div>

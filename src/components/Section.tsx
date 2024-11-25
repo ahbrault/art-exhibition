@@ -1,19 +1,30 @@
+'use client';
+
+import React from 'react';
+
 interface SectionProps {
-  id: string;
-  title: string;
-  content: string;
+  id?: string;
+  padding?: boolean;
+  children: React.ReactNode;
 }
 
-export default function Section({ id, title, content }: SectionProps) {
-  return (
-    <section
-      id={id}
-      className='border-t border-border bg-dark px-6 py-20 text-light'
-    >
-      <div className='mx-auto max-w-7xl px-4 text-center sm:px-6'>
-        <h2 className='mb-4 text-2xl font-bold lg:text-4xl'>{title}</h2>
-        <p className='text-base lg:text-lg'>{content}</p>
-      </div>
-    </section>
-  );
-}
+const Section = React.forwardRef<HTMLDivElement, SectionProps>(
+  ({ id, children, padding = true }, ref) => {
+    return (
+      <section
+        id={id}
+        className='relative min-h-screen bg-white text-dark'
+        ref={ref}
+      >
+        <div className={`mx-auto max-w-6xl ${padding ? 'py-32' : ''}`}>
+          {children}
+        </div>
+      </section>
+    );
+  }
+);
+
+// Définir le displayName pour le composant
+Section.displayName = 'Section';
+
+export default Section;
