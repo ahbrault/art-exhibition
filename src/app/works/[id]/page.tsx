@@ -58,7 +58,7 @@ const WorkPreview = () => {
               <img
                 src={artwork.image}
                 alt={artwork.title}
-                className='animate-fade-in mx-auto w-full max-w-2xl object-cover transition-transform duration-700 lg:mb-4'
+                className='animate-fade-in mx-auto w-full max-w-2xl max-h-[80vh] object-cover transition-transform duration-700 lg:mb-4'
               />
             </div>
 
@@ -81,7 +81,7 @@ const WorkPreview = () => {
         ) : (
           <div>
             <AudioPlayer audioSrc={artwork.audioPath} />
-            <h2 className='animate-fade-in mb-0 text-center text-5xl uppercase opacity-0 md:text-7xl'>
+            <h2 className='animate-fade-in mb-0 text-center text-4xl uppercase opacity-0 md:text-7xl break-words'>
               {artwork.title}
             </h2>
             <h3 className='animate-fade-in taviraj text-center text-3xl uppercase italic opacity-0 md:text-5xl'>
@@ -118,7 +118,7 @@ const WorkPreview = () => {
 
                     <img
                       src={artwork.subImage}
-                      className='animate-fade-in mb-8 mt-16 opacity-0'
+                      className='animate-fade-in mb-8 mt-16 opacity-0 max-h-56 w-full object-cover'
                       alt=''
                     />
                     <h4 className='animate-fade-in text-left text-xl uppercase opacity-0'>
@@ -150,7 +150,7 @@ const WorkPreview = () => {
                             className='max-w-[100px] md:order-2'
                             alt=''
                           />
-                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg'>
+                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg text-left'>
                             <LiaLongArrowAltLeftSolid />
                             {artworks[currentIndex - 1].title}
                           </span>
@@ -171,7 +171,7 @@ const WorkPreview = () => {
                             className='max-w-[100px]'
                             alt=''
                           />
-                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg'>
+                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg text-right'>
                             {artworks[currentIndex + 1].title}
                             <LiaLongArrowAltRightSolid />
                           </span>

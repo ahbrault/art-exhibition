@@ -33,8 +33,8 @@ export const artworks: Artwork[] = [
       'Jean Marc Larhantec transforme chaque tableau en vibration pure, capturant les forces invisibles du monde. Inspiré par des années de méditation, de voyages et de contemplation, il peint comme on compose une symphonie, où chaque couleur devient une note et chaque coup de pinceau, une résonance. Cette exposition invite à découvrir sa quête de la fréquence universelle, une énergie qui relie chaque être vivant et dépasse les limites du visible pour révéler les mystères de la vie.',
     ],
     nextPaintingText: 'Rendez-vous au tableau suivant.',
-    image: '/works/heart-activation/heart-activation-paint.jpg',
-    subImage: '/works/heart-activation/heart-activation-image.png',
+    image: '/works/heart-activation/heart-activation-paint.png',
+    subImage: '/works/heart-activation/heart-activation-image.webp',
     audioPath: '/works/heart-activation/heart-activation-music.mp3',
   },
   {
@@ -55,7 +55,7 @@ export const artworks: Artwork[] = [
     nextPaintingText:
       'Pour la suite de la visite, approchez-vous du tableau suivant.',
     image: '/works/babylon/babylon-paint.jpg',
-    subImage: '/works/babylon/babylon-image.png',
+    subImage: '/works/babylon/babylon-image.webp',
     audioPath: '/works/babylon/babylon-music.mp3',
   },
   {
@@ -76,7 +76,7 @@ export const artworks: Artwork[] = [
     ],
     nextPaintingText: 'Suite au prochain tableau...',
     image: '/works/my-girl/my-girl-paint.png',
-    subImage: '/works/my-girl/my-girl-image.png',
+    subImage: '/works/my-girl/my-girl-image.webp',
     audioPath: '/works/my-girl/my-girl-music.mp3',
   },
   {
@@ -97,7 +97,7 @@ export const artworks: Artwork[] = [
     ],
     nextPaintingText:
       'Avancez vers la prochaine œuvre pour continuer l’immersion.',
-    subImage: '/works/yellow-corner/yellow-corner-image.png',
+    subImage: '/works/yellow-corner/yellow-corner-image.webp',
     audioPath: '/works/yellow-corner/yellow-corner-music.mp3',
   },
   {
@@ -119,7 +119,7 @@ export const artworks: Artwork[] = [
     nextPaintingText:
       'Avancez vers le prochain tableau pour découvrir la suite.',
     image: '/works/black-hole-sun/black-hole-sun-paint.jpeg',
-    subImage: '/works/black-hole-sun/black-hole-sun-image.png',
+    subImage: '/works/black-hole-sun/black-hole-sun-image.webp',
     audioPath: '/works/black-hole-sun/black-hole-sun-music.mp3',
   },
   {
@@ -137,8 +137,8 @@ export const artworks: Artwork[] = [
       'Dans le cadre unique du Château Troplong Mondot, l’art de Jean Marc Larhantec trouve une résonance rare et puissante. Entourées des vignobles et de la terre de Saint-Émilion, ses œuvres capturent l’énergie du lieu, se fondant dans une harmonie cosmique. Cette exposition devient ainsi un espace où l’art et le terroir parlent le même langage, une symphonie de fréquences partagées, imprégnées de l’histoire et de la nature environnante.',
     ],
     nextPaintingText: 'Approchez du tableau suivant pour explorer la suite.',
-    image: '/works/south-of-heaven/south-of-heaven-paint.jpeg',
-    subImage: '/works/south-of-heaven/south-of-heaven-image.png',
+    image: '/works/south-of-heaven/south-of-heaven-paint.png',
+    subImage: '/works/south-of-heaven/south-of-heaven-image.webp',
     audioPath: '/works/south-of-heaven/south-of-heaven-music.mp3',
   },
   {
@@ -158,7 +158,7 @@ export const artworks: Artwork[] = [
     ],
     nextPaintingText: 'Approchez du tableau suivant pour explorer la suite.',
     image: '/works/cinema/cinema-paint.png',
-    subImage: '/works/cinema/cinema-image.png',
+    subImage: '/works/cinema/cinema-image.jpg',
     audioPath: '/works/cinema/cinema-music.mp3',
   },
   {
@@ -179,7 +179,7 @@ export const artworks: Artwork[] = [
     nextPaintingText:
       'Poursuivez votre visite en vous dirigeant vers le prochain tableau.',
     image: '/works/i-believe-in-you/i-believe-in-you-paint.png',
-    subImage: '/works/i-believe-in-you/i-believe-in-you-image.png',
+    subImage: '/works/i-believe-in-you/i-believe-in-you-image.webp',
     audioPath: '/works/i-believe-in-you/i-believe-in-you-music.mp3',
   },
   {
@@ -200,7 +200,7 @@ export const artworks: Artwork[] = [
     nextPaintingText:
       "Continuez l'expérience en avançant vers le tableau suivant.",
     image: '/works/transhumance/transhumance-paint.png',
-    subImage: '/works/transhumance/transhumance-image.png',
+    subImage: '/works/transhumance/transhumance-image.webp',
     audioPath: '/works/transhumance/transhumance-music.mp3',
   },
   {
@@ -221,7 +221,7 @@ export const artworks: Artwork[] = [
     nextPaintingText:
       "Avancez vers le tableau suivant pour continuer la découverte.",
     image: '/works/elon-is-playing/elon-is-playing-paint.png',
-    subImage: '/works/elon-is-playing/elon-is-playing-image.png',
+    subImage: '/works/elon-is-playing/elon-is-playing-image.webp',
     audioPath: '/works/elon-is-playing/elon-is-playing-music.mp3',
   },
 ];
