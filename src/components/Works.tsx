@@ -116,7 +116,7 @@ const Works = () => {
                 </div>
                 <div className='w-1/2'>
                   <Link href={`/works/${artwork.id}`}>
-                    <h3 className='mb-0 text-xl font-normal uppercase'>
+                    <h3 className='mb-0 text-xl font-medium uppercase'>
                       {artwork.title}
                     </h3>
                     <p className='mt-0 text-lg italic'>{artwork.frequency}</p>
