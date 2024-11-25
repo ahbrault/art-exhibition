@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
   return (
     <section
@@ -7,10 +9,12 @@ export default function Hero() {
       <div className='min-h-[95vh]'>
         <div className='flex flex-col items-center gap-8 py-20 md:flex-row md:py-32'>
           <div className='order-1 md:order-2 md:w-1/2'>
-            <img
+            <Image
               src='/frequences.webp'
+              width={400}
+              height={600}
               className='animate-fade-in md:max-h-sm h-full max-h-[70%] w-full max-w-[70%] object-cover md:ml-auto md:max-w-sm'
-              alt="Fréquences exhibition"
+              alt='Fréquences exhibition'
             />
           </div>
 

@@ -129,38 +129,6 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
           </div>
         </div>
       </div>
-      <style jsx>{`
-        input[type='range']::-webkit-slider-thumb {
-          appearance: none;
-          width: 4px;
-          height: 16px;
-          border-radius: 2px;
-          background-color: #121211;
-          z-index: 52;
-          cursor: pointer;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        input[type='range']::-moz-range-thumb {
-          width: 4px;
-          height: 16px;
-          border-radius: 2px;
-          background-color: #121211;
-          z-index: 52;
-          cursor: pointer;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        input[type='range']::-ms-thumb {
-          width: 4px;
-          height: 16px;
-          border-radius: 2px;
-          background-color: #121211;
-          cursor: pointer;
-          z-index: 52;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-      `}</style>
     </div>
   );
 };

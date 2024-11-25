@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix css for responsiveness">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AudioPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AudioPlayer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/audioplayer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/all.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +34,9 @@
     "accountId": "255ecd44-e38b-4fbb-9f03-2be1779311e4"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -99,11 +105,15 @@
       <option name="presentableId" value="Default" />
       <updated>1732449103805</updated>
       <workItem from="1732449105318" duration="49361000" />
-      <workItem from="1732526908296" duration="11360000" />
+      <workItem from="1732526908296" duration="13387000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix css for responsiveness" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix css for responsiveness" />
   </component>
 </project>

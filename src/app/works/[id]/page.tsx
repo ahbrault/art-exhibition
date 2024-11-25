@@ -10,6 +10,7 @@ import {
   LiaLongArrowAltLeftSolid,
   LiaLongArrowAltRightSolid,
 } from 'react-icons/lia';
+import Image from 'next/image';
 
 const WorkPreview = () => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -55,10 +56,12 @@ const WorkPreview = () => {
             className='pointer'
           >
             <div className='fixed inset-0 z-30 flex h-full w-full items-center justify-center'>
-              <img
+              <Image
                 src={artwork.image}
                 alt={artwork.title}
-                className='animate-fade-in mx-auto w-full max-w-2xl max-h-[80vh] object-cover transition-transform duration-700 lg:mb-4'
+                height={800}
+                width={700}
+                className='animate-fade-in mx-auto max-h-[80vh] w-full max-w-2xl object-cover transition-transform duration-700 lg:mb-4'
               />
             </div>
 
@@ -81,7 +84,7 @@ const WorkPreview = () => {
         ) : (
           <div>
             <AudioPlayer audioSrc={artwork.audioPath} />
-            <h2 className='animate-fade-in mb-0 text-center text-4xl uppercase opacity-0 md:text-7xl break-words'>
+            <h2 className='animate-fade-in mb-0 break-words text-center text-4xl uppercase opacity-0 md:text-7xl'>
               {artwork.title}
             </h2>
             <h3 className='animate-fade-in taviraj text-center text-3xl uppercase italic opacity-0 md:text-5xl'>
@@ -96,9 +99,11 @@ const WorkPreview = () => {
               <div className='space-y-24'>
                 <div className='artwork-section mt-8 items-start gap-8 transition-all duration-1000 md:gap-12 lg:flex'>
                   <div className='w-full overflow-hidden lg:sticky lg:top-24 lg:w-1/2'>
-                    <img
+                    <Image
                       src={artwork.image}
                       alt={artwork.title}
+                      height={850}
+                      width={550}
                       className='animate-fade-in max-h-4xl mx-auto mb-12 h-full w-full max-w-4xl object-cover opacity-0 transition-transform duration-700 lg:mb-4'
                     />
                     <p className='animate-fade-in mb-12 hidden text-xl uppercase opacity-0 lg:block'>
@@ -116,10 +121,12 @@ const WorkPreview = () => {
                       </p>
                     ))}
 
-                    <img
+                    <Image
                       src={artwork.subImage}
-                      className='animate-fade-in mb-8 mt-16 opacity-0 max-h-56 w-full object-cover'
-                      alt=''
+                      alt={artwork.title}
+                      height={224}
+                      width={550}
+                      className='animate-fade-in mb-8 mt-16 max-h-56 w-full object-cover opacity-0'
                     />
                     <h4 className='animate-fade-in text-left text-xl uppercase opacity-0'>
                       {artwork.subTitle}
@@ -145,12 +152,14 @@ const WorkPreview = () => {
                           href={`/works/${artwork.id - 1}`}
                           className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'
                         >
-                          <img
+                          <Image
                             src={artworks[currentIndex - 1].image}
-                            className='max-w-[100px] md:order-2'
-                            alt=''
+                            alt={artworks[currentIndex - 1].title}
+                            height={100}
+                            width={150}
+                            className='h-[100px] w-[150px] object-cover md:order-2'
                           />
-                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg text-left'>
+                          <span className='inline-flex items-center gap-2 text-left font-medium uppercase md:text-lg'>
                             <LiaLongArrowAltLeftSolid />
                             {artworks[currentIndex - 1].title}
                           </span>
@@ -166,12 +175,14 @@ const WorkPreview = () => {
                           href={`/works/${artwork.id + 1}`}
                           className='flex flex-col items-end gap-4 md:flex-row md:items-center md:gap-8'
                         >
-                          <img
+                          <Image
                             src={artworks[currentIndex + 1].image}
-                            className='max-w-[100px]'
-                            alt=''
+                            alt={artworks[currentIndex + 1].title}
+                            height={100}
+                            width={150}
+                            className='h-[100px] w-[150px] object-cover'
                           />
-                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg text-right'>
+                          <span className='inline-flex items-center gap-2 text-right font-medium uppercase md:text-lg'>
                             {artworks[currentIndex + 1].title}
                             <LiaLongArrowAltRightSolid />
                           </span>
@@ -186,23 +197,6 @@ const WorkPreview = () => {
           </div>
         )}
       </main>
-
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };

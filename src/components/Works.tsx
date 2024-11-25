@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { artworks } from '@/data';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface VisibleSections {
   [key: string]: boolean;
@@ -107,16 +108,19 @@ const Works = () => {
               >
                 <div className='w-1/2 overflow-hidden'>
                   <Link href={`/works/${artwork.id}`}>
-                    <img
+                    <Image
                       src={artwork.image}
                       alt={artwork.title}
+                      layout='responsive'
+                      width={450}
+                      height={700}
                       className='max-h-md ml-auto h-full w-full max-w-md object-cover transition-transform duration-700 hover:scale-110'
                     />
                   </Link>
                 </div>
                 <div className='w-1/2'>
                   <Link href={`/works/${artwork.id}`}>
-                    <h3 className='mb-0 text-xl font-medium uppercase'>
+                    <h3 className='mb-0 text-base font-medium uppercase sm:text-xl'>
                       {artwork.title}
                     </h3>
                     <p className='mt-0 text-lg italic'>{artwork.frequency}</p>
@@ -127,23 +131,6 @@ const Works = () => {
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out forwards;
-        }
-      `}</style>
     </div>
   );
 };

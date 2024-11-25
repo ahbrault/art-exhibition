@@ -2,191 +2,243 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Polices personnalisées */
+/* Custom Fonts */
 @font-face {
-    font-family: 'Creato Display';
-    src: url('./fonts/CreatoDisplay-Bold.otf') format('opentype');
-    font-weight: 700;
-    font-style: normal;
+  font-family: 'Creato Display';
+  src: url('./fonts/CreatoDisplay-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Creato Display';
-    src: url('./fonts/CreatoDisplay-Medium.otf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Creato Display';
+  src: url('./fonts/CreatoDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Creato Display';
-    src: url('./fonts/CreatoDisplay-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Creato Display';
+  src: url('./fonts/CreatoDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Taviraj';
-    src: url('./fonts/Taviraj-Medium.ttf') format('opentype');
-    font-weight: 500;
-    font-style: normal;
+  font-family: 'Taviraj';
+  src: url('./fonts/Taviraj-Medium.ttf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
 
 :root {
-    --dark: #121211;
-    --paragraphs: #e5dfd599;
-    --light: #e5dfd5;
-    --border: #e5dfd526;
+  --dark: #121211;
+  --paragraphs: #e5dfd599;
+  --light: #e5dfd5;
+  --border: #e5dfd526;
 }
 
 * {
-    font-family: 'Creato Display', 'Inter', sans-serif;
+  font-family: 'Creato Display', 'Inter', sans-serif;
 }
 
 h1 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 26px;
-    font-size: 75px;
-    font-weight: 500;
-    line-height: 107%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 26px;
+  font-size: 75px;
+  font-weight: 500;
+  line-height: 107%;
 }
 
 h2 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 24px;
-    font-size: 100px;
-    font-weight: 500;
-    line-height: 114%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 100px;
+  font-weight: 500;
+  line-height: 114%;
 }
 
 h3 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 22px;
-    font-size: 42px;
-    font-weight: 500;
-    line-height: 120%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 120%;
 }
 
 h4 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 127%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 127%;
 }
 
 h5 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 132%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 132%;
 }
 
 h6 {
-    color: var(--dark);
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 137%;
+  color: var(--dark);
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 137%;
 }
 
 p {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 ul,
 ol {
-    margin-top: 0;
-    margin-bottom: 30px;
-    padding-left: 36px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-left: 36px;
 }
 
 li {
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 7px;
 }
 
 .taviraj {
-    font-family: 'Taviraj', 'Creato Display', 'Inter', sans-serif;
+  font-family: 'Taviraj', 'Creato Display', 'Inter', sans-serif;
+}
+
+/*
+ * Animation
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/*
+ * Audio Player CSS
+ */
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: var(--dark);
+  z-index: 52;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: var(--dark);
+  z-index: 52;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input[type='range']::-ms-thumb {
+  width: 4px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: var(--dark);
+  cursor: pointer;
+  z-index: 52;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 991px) {
-    h1 {
-        font-size: 62px;
-    }
+  h1 {
+    font-size: 62px;
+  }
 
-    h2 {
-        font-size: 56px;
-    }
+  h2 {
+    font-size: 56px;
+  }
 
-    h3 {
-        font-size: 36px;
-    }
+  h3 {
+    font-size: 36px;
+  }
 
-    h4 {
-        font-size: 28px;
-    }
+  h4 {
+    font-size: 28px;
+  }
 
-    h5 {
-        font-size: 22px;
-    }
+  h5 {
+    font-size: 22px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    h1 {
-        font-size: 52px;
-    }
+  h1 {
+    font-size: 52px;
+  }
 
-    h2 {
-        font-size: 39px;
-    }
+  h2 {
+    font-size: 39px;
+  }
 
-    h3 {
-        font-size: 32px;
-    }
+  h3 {
+    font-size: 32px;
+  }
 
-    h4 {
-        font-size: 24px;
-    }
+  h4 {
+    font-size: 24px;
+  }
 
-    h5 {
-        font-size: 20px;
-    }
+  h5 {
+    font-size: 20px;
+  }
 
-    h6 {
-        font-size: 17px;
-    }
+  h6 {
+    font-size: 17px;
+  }
 }
 
 @media screen and (max-width: 479px) {
-    h1 {
-        font-size: 44px;
-    }
+  h1 {
+    font-size: 44px;
+  }
 
-    h2 {
-        font-size: 34px;
-    }
+  h2 {
+    font-size: 34px;
+  }
 
-    h3 {
-        font-size: 26px;
-    }
+  h3 {
+    font-size: 26px;
+  }
 
-    h4 {
-        font-size: 21px;
-    }
+  h4 {
+    font-size: 21px;
+  }
 
-    h5 {
-        font-size: 19px;
-    }
+  h5 {
+    font-size: 19px;
+  }
 
-    h6 {
-        font-size: 16px;
-    }
+  h6 {
+    font-size: 16px;
+  }
 }
