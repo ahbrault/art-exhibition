@@ -33,7 +33,7 @@ export const artworks: Artwork[] = [
       'Jean Marc Larhantec transforme chaque tableau en vibration pure, capturant les forces invisibles du monde. Inspiré par des années de méditation, de voyages et de contemplation, il peint comme on compose une symphonie, où chaque couleur devient une note et chaque coup de pinceau, une résonance. Cette exposition invite à découvrir sa quête de la fréquence universelle, une énergie qui relie chaque être vivant et dépasse les limites du visible pour révéler les mystères de la vie.',
     ],
     nextPaintingText: 'Rendez-vous au tableau suivant.',
-    image: '/works/heart-activation/heart-activation-paint.png',
+    image: '/works/heart-activation/heart-activation-paint.webp',
     subImage: '/works/heart-activation/heart-activation-image.webp',
     audioPath: '/works/heart-activation/heart-activation-music.mp3',
   },
@@ -50,11 +50,11 @@ export const artworks: Artwork[] = [
     ],
     subTitle: 'Une Connexion Sensorielle',
     subDescription: [
-      'Dans "FREQUENCES", Jean Marc Larhantec nous entraîne dans une exploration sensorielle profonde. Ses œuvres, imprégnées de son amour pour la musique, la lumière et la méditation, touchent l’âme autant qu’elles captivent les sens. En jouant sur les vibrations subtiles des couleurs et des formes, chaque toile devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir la vie au-delà du tangible.',
+      'Dans "FRÉQUENCES", Jean Marc Larhantec nous entraîne dans une exploration sensorielle profonde. Ses œuvres, imprégnées de son amour pour la musique, la lumière et la méditation, touchent l’âme autant qu’elles captivent les sens. En jouant sur les vibrations subtiles des couleurs et des formes, chaque toile devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir la vie au-delà du tangible.',
     ],
     nextPaintingText:
       'Pour la suite de la visite, approchez-vous du tableau suivant.',
-    image: '/works/babylon/babylon-paint.jpg',
+    image: '/works/babylon/babylon-paint.webp',
     subImage: '/works/babylon/babylon-image.webp',
     audioPath: '/works/babylon/babylon-music.mp3',
   },
@@ -75,7 +75,7 @@ export const artworks: Artwork[] = [
       "Jean Marc Larhantec compose des univers visuels qui vibrent au rythme de la vie elle-même. Fruit d’une méditation profonde et d'une quête spirituelle, chaque œuvre explore ce qui connecte chaque être à l’univers. Ses toiles, abstraites et lumineuses, révèlent une quête d’unité universelle, où la couleur et le son fusionnent dans une chorégraphie spontanée, touchant le spectateur au-delà de la simple compréhension visuelle.",
     ],
     nextPaintingText: 'Suite au prochain tableau...',
-    image: '/works/my-girl/my-girl-paint.png',
+    image: '/works/my-girl/my-girl-paint.webp',
     subImage: '/works/my-girl/my-girl-image.webp',
     audioPath: '/works/my-girl/my-girl-music.mp3',
   },
@@ -83,7 +83,6 @@ export const artworks: Artwork[] = [
     id: 4,
     title: 'Yellow Corner',
     frequency: '(349 Hz)',
-    image: '/works/yellow-corner/yellow-corner-paint.jpeg',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
     description: [
@@ -93,10 +92,11 @@ export const artworks: Artwork[] = [
     ],
     subTitle: 'Écouter les Couleurs',
     subDescription: [
-      'Pour Jean Marc Larhantec, les couleurs ne se contentent pas d’être vues : elles se vivent et s’écoutent. Dans chaque toile, il transcrit une symphonie intérieure, une musique de fréquences qui transcende le visible. Cette exposition "FREQUENCES" est une invitation à plonger dans les ondes de lumière et de son qui font vibrer le monde et permettent à chaque spectateur de ressentir le monde avec des yeux neufs.',
+      'Pour Jean Marc Larhantec, les couleurs ne se contentent pas d’être vues : elles se vivent et s’écoutent. Dans chaque toile, il transcrit une symphonie intérieure, une musique de fréquences qui transcende le visible. Cette exposition "FRÉQUENCES" est une invitation à plonger dans les ondes de lumière et de son qui font vibrer le monde et permettent à chaque spectateur de ressentir le monde avec des yeux neufs.',
     ],
     nextPaintingText:
       'Avancez vers la prochaine œuvre pour continuer l’immersion.',
+    image: '/works/yellow-corner/yellow-corner-paint.webp',
     subImage: '/works/yellow-corner/yellow-corner-image.webp',
     audioPath: '/works/yellow-corner/yellow-corner-music.mp3',
   },
@@ -114,11 +114,11 @@ export const artworks: Artwork[] = [
     ],
     subTitle: 'Une Alchimie de Lumière et de Musique',
     subDescription: [
-      'Au cœur de "FREQUENCES", Jean Marc Larhantec cherche à capturer l’alchimie entre la lumière, la musique et la matière. Ses œuvres témoignent de cette recherche, offrant au spectateur une expérience immersive où la couleur et le son se rejoignent pour créer un espace vibratoire unique. Ici, il transforme chaque toile en un reflet de la fréquence universelle, unifiant l’art et la nature en une même résonance, pour toucher l’essence de la vie elle-même.',
+      'Au cœur de "FRÉQUENCES", Jean Marc Larhantec cherche à capturer l’alchimie entre la lumière, la musique et la matière. Ses œuvres témoignent de cette recherche, offrant au spectateur une expérience immersive où la couleur et le son se rejoignent pour créer un espace vibratoire unique. Ici, il transforme chaque toile en un reflet de la fréquence universelle, unifiant l’art et la nature en une même résonance, pour toucher l’essence de la vie elle-même.',
     ],
     nextPaintingText:
       'Avancez vers le prochain tableau pour découvrir la suite.',
-    image: '/works/black-hole-sun/black-hole-sun-paint.jpeg',
+    image: '/works/black-hole-sun/black-hole-sun-paint.webp',
     subImage: '/works/black-hole-sun/black-hole-sun-image.webp',
     audioPath: '/works/black-hole-sun/black-hole-sun-music.mp3',
   },
@@ -137,7 +137,7 @@ export const artworks: Artwork[] = [
       'Dans le cadre unique du Château Troplong Mondot, l’art de Jean Marc Larhantec trouve une résonance rare et puissante. Entourées des vignobles et de la terre de Saint-Émilion, ses œuvres capturent l’énergie du lieu, se fondant dans une harmonie cosmique. Cette exposition devient ainsi un espace où l’art et le terroir parlent le même langage, une symphonie de fréquences partagées, imprégnées de l’histoire et de la nature environnante.',
     ],
     nextPaintingText: 'Approchez du tableau suivant pour explorer la suite.',
-    image: '/works/south-of-heaven/south-of-heaven-paint.png',
+    image: '/works/south-of-heaven/south-of-heaven-paint.webp',
     subImage: '/works/south-of-heaven/south-of-heaven-image.webp',
     audioPath: '/works/south-of-heaven/south-of-heaven-music.mp3',
   },
@@ -157,8 +157,8 @@ export const artworks: Artwork[] = [
       'Les toiles de Jean Marc sont nées de méditations profondes. En travaillant avec des sons et des fréquences spécifiques, il explore des états d’être qui se matérialisent en couleurs et formes. Chaque visiteur peut y trouver sa propre résonance, un écho de son histoire intime.',
     ],
     nextPaintingText: 'Approchez du tableau suivant pour explorer la suite.',
-    image: '/works/cinema/cinema-paint.png',
-    subImage: '/works/cinema/cinema-image.jpg',
+    image: '/works/cinema/cinema-paint.webp',
+    subImage: '/works/cinema/cinema-image.webp',
     audioPath: '/works/cinema/cinema-music.mp3',
   },
   {
@@ -178,7 +178,7 @@ export const artworks: Artwork[] = [
     ],
     nextPaintingText:
       'Poursuivez votre visite en vous dirigeant vers le prochain tableau.',
-    image: '/works/i-believe-in-you/i-believe-in-you-paint.png',
+    image: '/works/i-believe-in-you/i-believe-in-you-paint.webp',
     subImage: '/works/i-believe-in-you/i-believe-in-you-image.webp',
     audioPath: '/works/i-believe-in-you/i-believe-in-you-music.mp3',
   },
@@ -199,7 +199,7 @@ export const artworks: Artwork[] = [
     ],
     nextPaintingText:
       "Continuez l'expérience en avançant vers le tableau suivant.",
-    image: '/works/transhumance/transhumance-paint.png',
+    image: '/works/transhumance/transhumance-paint.webp',
     subImage: '/works/transhumance/transhumance-image.webp',
     audioPath: '/works/transhumance/transhumance-music.mp3',
   },
@@ -219,9 +219,100 @@ export const artworks: Artwork[] = [
       'Jean Marc Larhantec laisse la musique et la vibration guider chaque geste sur la toile, atteignant une spontanéité libérée de toute convention artistique. Inspiré par l’écoute intérieure, il puise dans les fréquences profondes de la vie pour créer des œuvres intuitives, où chaque forme et chaque couleur semblent flotter et résonner dans l’espace. Cette exposition nous invite à ressentir les impulsions vibratoires de l’univers, traduites dans un langage pictural unique.',
     ],
     nextPaintingText:
-      "Avancez vers le tableau suivant pour continuer la découverte.",
-    image: '/works/elon-is-playing/elon-is-playing-paint.png',
+      'Avancez vers le tableau suivant pour continuer la découverte.',
+    image: '/works/elon-is-playing/elon-is-playing-paint.webp',
     subImage: '/works/elon-is-playing/elon-is-playing-image.webp',
     audioPath: '/works/elon-is-playing/elon-is-playing-music.mp3',
+  },
+  {
+    id: 11,
+    title: 'A Fragile Thing',
+    frequency: '(432 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      'Créée pour la première fois dans un état de méditation profonde, A Fragile Thing marque une étape unique dans la pratique artistique de Jean Marc Larhantec. Contrairement à ses autres œuvres, où il médite avant de peindre, l’artiste a cette fois fusionné le processus méditatif avec l’acte créatif lui-même, peignant en pleine conscience tout en écoutant des fréquences sacrées. Ces vibrations, réputées pour leur pouvoir d’harmonisation et de connexion spirituelle, ont amplifié sa réceptivité aux énergies environnantes, rendant chaque geste et chaque trait empreints d’une sensibilité nouvelle.',
+      "Dans cette toile, le noir se révèle être bien plus qu’une simple couleur : pour Jean Marc, il devient un réceptacle lumineux, un espace d’énergie et de potentiel. Ce noir profond symbolise la matière invisible, celle qui relie les atomes et incarne l’essence de la création. Au cœur de l'œuvre, une ouverture mystérieuse se dessine, comme une porte vers les Annales Akashiques. Accéder à cet espace symbolique permettrait de puiser dans une sagesse ancienne, d’explorer les souvenirs de l’âme à travers ses vies passées, présentes et futures, et de trouver une direction spirituelle.",
+      "A Fragile Thing nous parle de la fragilité de la Terre et de l’humanité, une vulnérabilité qui, loin d'être une faiblesse, devient une source de connexion et de sensibilité entre les êtres. Par cette œuvre, Jean Marc Larhantec rappelle que la fragilité est ce qui crée des adhérences, ce lien subtil qui nous permet de nous soutenir les uns les autres. A Fragile Thing invite à contempler cette précieuse fragilité et à éveiller notre conscience collective, afin de percevoir la beauté invisible qui unit toutes choses.",
+    ],
+    subTitle: "Fragments d'Univers",
+    subDescription: [
+      'Chaque œuvre de Jean Marc Larhantec est une tentative de capturer l’infini dans le fini. L’artiste explore la puissance invisible des fréquences qui animent l’univers. Ses œuvres abstraites, baignées de lumière et de mouvement, sont comme des fenêtres ouvertes sur cette énergie subtile.',
+    ],
+    nextPaintingText:
+      'Avancez vers le tableau suivant pour continuer la découverte.',
+    image: '/works/a-fragile-thing/a-fragile-thing-paint.webp',
+    subImage: '/works/a-fragile-thing/a-fragile-thing-image.webp',
+    audioPath: '/works/a-fragile-thing/a-fragile-thing-music.mp3',
+  },
+  {
+    id: 12,
+    title: 'I can never say goodbye',
+    frequency: '(432 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      "Inspirée par le dernier single du groupe anglais The Cure, I Can Never Say Goodbye, cette œuvre de Jean Marc Larhantec explore la douleur et la beauté du souvenir. À travers cette toile, l'artiste exprime la difficulté de laisser partir ceux que l'on aime, tout en nourrissant le besoin de préserver leur présence dans notre vie. Le morceau de The Cure, riche en textures sonores enveloppantes et en couches de guitares réverbérées, a influencé l’ambiance méditative et introspective de cette œuvre. Les basses profondes et les synthétiseurs de la chanson, typiques du style de Robert Smith, créent un univers sonore dense, qui incite à la contemplation et à l’émotion.",
+      "Les teintes de bleu dans cette œuvre évoquent la profondeur émotionnelle et l’introspection, rappelant la sérénité et la mélancolie de l’océan. Le bleu symbolise également la fidélité aux souvenirs, un lien indéfectible avec ceux que l'on ne peut oublier. Le noir, quant à lui, représente ici le mystère et l’inconnu, une obscurité douce qui, loin d’être menaçante, devient un espace de protection, un réceptacle où se nichent les souvenirs et les émotions les plus intimes. Ensemble, le bleu et le noir créent une harmonie apaisante et contemplative, un équilibre entre l’ombre et la lumière qui illustre la profondeur des sentiments de l’artiste.",
+      'Avant de réaliser cette peinture, Jean Marc Larhantec a plongé dans une méditation profonde en écoutant une fréquence de 432 Hz, connue pour ses propriétés apaisantes et harmonisantes. Cette fréquence, surnommée "la fréquence de l\'amour", invite à une résonance émotionnelle qui aide à faire face à des sentiments d’abandon et de perte. Dans cette œuvre, les textures fluides et les mouvements de couleur suggèrent un espace intérieur où l’amour et le manque coexistent, formant des socles émotionnels essentiels mais difficiles à abandonner.',
+      "Pour Jean Marc, l'influence de l’amour et du souvenir est omniprésente. Tout comme Robert Smith a trouvé en son épouse Mary Poole une muse éternelle, Jean Marc explore ici la fragilité des liens humains et l’importance de l’attachement. I Can Never Say Goodbye est une déclaration silencieuse sur l’incapacité de se détacher des piliers affectifs, de ces ancrages qui, malgré la douleur, offrent un sentiment de sécurité. Par cette œuvre, l’artiste nous invite à méditer sur l’importance de préserver l’amour et les souvenirs qui façonnent notre existence.",
+    ],
+    subTitle: 'À la Rencontre des Ondes',
+    subDescription: [
+      '"FRÉQUENCES" est un monde vibrant que Jean Marc Larhantec a créé pour que chacun y trouve sa propre résonance. Inspiré par la musique et les énergies profondes, il peint pour rendre visible l’invisible, pour exprimer la danse perpétuelle des ondes et des vibrations qui unissent chaque élément du monde. Cette exposition est un voyage sensible au cœur des énergies de l’univers.',
+    ],
+    nextPaintingText:
+      "Découvrez la suite en vous approchant de l'œuvre suivante.",
+    image: '/works/i-can-never-say-goodbye/i-can-never-say-goodbye-paint.webp',
+    subImage:
+      '/works/i-can-never-say-goodbye/i-can-never-say-goodbye-image.webp',
+    audioPath:
+      '/works/i-can-never-say-goodbye/i-can-never-say-goodbye-music.mp3',
+  },
+  {
+    id: 13,
+    title: 'Touch Me I’m Lost',
+    frequency: '(880 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      'Touch me I\'m lost" est une toile qui vibre au rythme de l’intensité sonore de l’album Goo de Sonic Youth. Réalisée sous l’impulsion créative d’une écoute immersive, l’œuvre capte l’essence de cette chanson, dont la fréquence oscillante semble dialoguer avec le chaos émotionnel. Pour Jean Marc Larhantec, la musique est bien plus qu’une simple inspiration : elle est un outil de résonance, un vecteur d’émotions brutes et universelles.',
+      'À travers cette toile, l’artiste traduit non seulement les textures sonores et les distorsions caractéristiques du rock alternatif, mais aussi l’écho d’une histoire personnelle. Lors de la création, Jean Marc pensait à l’un de ses plus proches amis, pris dans les tourments d’une rupture difficile. Les harmonies dissonantes de Sonic Youth, mêlées aux fréquences rugueuses de la guitare, sont devenues un exutoire, une manière de peindre l’indicible.',
+      'Dans ce morceau, les guitares saturées de Sonic Youth évoquent des fréquences puissantes et dominantes, telles que 880 Hz, une octave au-dessus de la fréquence de référence musicale (440 Hz). Cette vibration particulière traverse la toile, résonnant dans chaque coup de pinceau comme une onde chargée de tension et de passion.',
+      'Dans le travail de Larhantec, la musique occupe une place centrale. Les grands groupes de rock, tels que Sonic Youth, The Cure ou encore Joy Division, marquent une empreinte indélébile sur ses œuvres. Ils ne sont pas seulement des bandes-son mais des catalyseurs, influençant les formes, les lignes et les couleurs. Chaque geste de l’artiste sur la toile peut être vu comme une note, chaque couche comme une vibration.',
+      '"Touch me I\'m lost" est ainsi une œuvre qui transcende les frontières du visible pour atteindre l’audible, où l’énergie électrique du rock rencontre la profondeur d’une douleur humaine. En mêlant ses souvenirs, ses influences et la puissance vibratoire du titre Kool Thing, Jean Marc Larhantec nous invite à ressentir, à nous laisser toucher, et à nous perdre avec lui dans cette fréquence intime et universelle.',
+    ],
+    subTitle: 'Rythme et Résonance',
+    subDescription: [
+      'Dans l’art de Jean Marc Larhantec, chaque couleur a sa propre fréquence, chaque tableau devient une onde, une résonance. Cette exposition célèbre l’harmonie entre la lumière et le rythme, comme une symphonie visuelle inspirée des profondeurs du domaine de Troplong Mondot. Ici, ses œuvres fusionnent avec l’énergie vibratoire du lieu, devenant des échos silencieux des mouvements subtils de la vie.',
+    ],
+    nextPaintingText:
+      "Découvrez la suite en vous approchant de l'œuvre suivante.",
+    image: '/works/touch-me-im-lost/touch-me-im-lost-paint.webp',
+    subImage: '/works/touch-me-im-lost/touch-me-im-lost-image.webp',
+    audioPath: '/works/touch-me-im-lost/touch-me-im-lost-music.mp3',
+  },
+  {
+    id: 14,
+    title: 'Minotaure',
+    frequency: '(880 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      'Face à "Minotaure", le visiteur est confronté à une œuvre magistrale, une véritable apothéose dans le parcours artistique de Jean Marc Larhantec. Inspirée par l’écoute du dernier album de Fontaines D.C. et habitée par les fréquences mélancoliques et fiévreuses du morceau Romance, cette toile ne se contente pas de raconter une histoire : elle hurle, vibre et résonne avec une intensité rare. Les couleurs, soigneusement orchestrées, dialoguent avec une force presque mythologique. Le bleu profond, strié de lumières mouvantes, évoque les labyrinthes d’émotions complexes, tandis que les touches de noir charbonneux ancrent la composition dans un combat viscéral. Ici, chaque coup de pinceau est une pulsation, chaque mouvement de peinture une fréquence traduite en image. Les éclats d’ocre et de jaune doré rappellent une lumière vacillante, comme celle qui guide dans les ténèbres un héros perdu. Ce contraste entre ombre et lumière devient une métaphore de l’âme en lutte.',
+      'Dans le morceau Romance, une fréquence symbolique émerge : 880 Hz, une octave au-dessus du La standard. Cette vibration, avec sa pureté et sa puissance, traverse la toile comme une onde, reliant chaque élément dans une harmonie chaotique. Elle incarne à la fois l’énergie et la tension, la mélodie et la dissonance, des forces que Larhantec traduit en une danse visuelle magistrale.',
+      'Le choix du titre "Minotaure" n’est pas anodin. Comme le monstre légendaire, l’œuvre semble être à la fois force brute et fragilité captive. On y perçoit un déchirement intérieur, une tension constante entre la puissance animale et l’introspection humaine. Le labyrinthe n’est pas seulement visuel, il est aussi sonore, comme si les fréquences de Fontaines D.C. se propageaient à travers la toile pour égarer ou guider le spectateur.',
+      'Cette œuvre est un aboutissement. Jean Marc Larhantec, à travers "Minotaure", canalise toute la force accumulée au fil de son parcours. Il transcende les frontières entre abstraction et narration, entre peinture et musique, pour atteindre une forme d’harmonie brute et percutante.',
+      'Devant cette toile, le visiteur est invité à ralentir, à écouter les battements qui émanent de ses propres émotions, à se laisser envelopper par ce champ de forces contradictoires. "Minotaure" n’est pas qu’une peinture, c’est une expérience totale : celle d’un artiste qui peint avec des fréquences, compose avec des couleurs, et livre un chef-d\'œuvre intemporel.',
+    ],
+    subTitle: 'Fréquence et Lumière',
+    subDescription: [
+      'Pour Jean Marc Larhantec, chaque couleur est une vibration, chaque coup de pinceau une résonance. Inspiré par les nuances subtiles du monde qui nous entoure, il crée des tableaux où la lumière et la couleur deviennent des échos visuels d’une symphonie invisible. À travers cette exposition, découvrez la fréquence qui émane de ses gestes artistiques.',
+    ],
+    nextPaintingText:
+      "Découvrez la suite en vous approchant de l'œuvre suivante.",
+    image: '/works/minotaure/minotaure-paint.webp',
+    subImage: '/works/minotaure/minotaure-image.webp',
+    audioPath: '/works/minotaure/minotaure-music.mp3',
   },
 ];
