@@ -134,8 +134,8 @@ const WorkPreview = () => {
                     ))}
                   </div>
                 </div>
-                <p className='animate-fade-in mt-24 text-left text-center text-xl font-medium uppercase opacity-0'>
-                  Pour la suite de la visite, approchez-vous du tableau suivant.
+                <p className='animate-fade-in mt-24 text-center text-xl font-medium uppercase opacity-0'>
+                  {artwork.nextPaintingText}
                 </p>
                 <div className='mx-auto flex max-w-5xl justify-between'>
                   {(() => {

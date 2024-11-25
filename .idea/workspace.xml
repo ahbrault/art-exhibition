@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/heart-activation/heart-activation-music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/my-girl/my-girl-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/my-girl/my-girl-music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/my-girl/my-girl-paint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/yellow-corner/yellow-corner-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/yellow-corner/yellow-corner-music.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/works/yellow-corner/yellow-corner-paint.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/musics/963 Hz éveil de lintuition et activation de la glande pinéale.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/musics/Radiohead - Nude.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/babylon/babylon-music.mp3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/paintings/babylon-image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/babylon/babylon-image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/paintings/babylon-paint.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/babylon/babylon-paint.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/paintings/heart-activation-image.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/heart-activation/heart-activation-image.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/paintings/heart-activation-paint.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/heart-activation/heart-activation-paint.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +44,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/public/resources/yellow-corner",
+    "last_opened_file_path": "/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/public/works/black-hole-sun",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,18 +67,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/works/black-hole-sun" />
       <recent name="$PROJECT_DIR$/public/resources/yellow-corner" />
       <recent name="$PROJECT_DIR$/public/resources/my-girl" />
       <recent name="$PROJECT_DIR$/public/paintings" />
       <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components/player" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/works" />
       <recent name="$PROJECT_DIR$/public/resources/yellow-corner" />
       <recent name="$PROJECT_DIR$/public/resources" />
       <recent name="$PROJECT_DIR$/public/resources/my-girl" />
       <recent name="$PROJECT_DIR$/public/ressources/paintings/heart-activation" />
-      <recent name="$PROJECT_DIR$/public/ressources/paintings/babylon" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -117,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1732449103805</updated>
       <workItem from="1732449105318" duration="49361000" />
-      <workItem from="1732526908296" duration="918000" />
+      <workItem from="1732526908296" duration="2866000" />
     </task>
     <servers />
   </component>
