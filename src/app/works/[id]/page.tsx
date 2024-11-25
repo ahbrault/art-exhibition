@@ -1,191 +1,155 @@
-"use client"
+'use client';
 
-import React, {useState, useEffect, useRef} from 'react';
-import {artworks} from "@/data";
-import {useParams} from "next/navigation";
-import ReactPlayer from "react-player";
-
-interface VisibleSections {
-    [key: string]: boolean;
-}
+import React, { useState, useEffect, useRef } from 'react';
+import { artworks } from '@/data';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
+import AudioPlayer from '@/components/AudioPlayer';
+import { IoPlay } from 'react-icons/io5';
 
 const WorkPreview = () => {
-    const [visibleSections, setVisibleSections] = useState<VisibleSections>({});
-    const rafRef = useRef<number | null>(null);
-    const contentRef = useRef<HTMLDivElement>(null);
-    const {id} = useParams();
+  const contentRef = useRef<HTMLDivElement>(null);
+  const { id } = useParams<{ id: string }>();
 
-    const artwork = artworks.find(art => art.id.toString() === id);
+  const artwork = artworks.find((art) => art.id.toString() === id);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-        document.documentElement.style.scrollBehavior = 'smooth';
+  useEffect(() => {
+    if (!isLoaded) {
+      const body = document.getElementsByName('body');
+      if (body.length === 1) {
+        body[0].style.overflow = 'hidden';
+      }
+    }
+  }, [isLoaded]);
 
-        const handleScroll = (): void => {
-            if (!contentRef.current) return;
+  useEffect(() => {
+    // Gérer l'overflow du body en fonction de isLoaded
+    const body = document.body;
+    if (!isLoaded) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
 
-            const sections = document.querySelectorAll<HTMLElement>('.artwork-section');
-            const newVisibleSections: VisibleSections = {};
+    // Nettoyage lorsque le composant est démonté
+    return () => {
+      body.style.overflow = '';
+    };
+  }, [isLoaded]);
 
-            sections.forEach((section) => {
-                const rect = section.getBoundingClientRect();
-                const isVisible = rect.top < window.innerHeight * 0.8;
-                newVisibleSections[section.id] = isVisible;
-            });
+  if (!artwork) return;
 
-            setVisibleSections(newVisibleSections);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        handleScroll();
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-            document.documentElement.style.scrollBehavior = 'auto';
-            if (rafRef.current) {
-                cancelAnimationFrame(rafRef.current);
-            }
-        };
-    }, []);
-
-    const playerRef = useRef<ReactPlayer>(null);
-
-    useEffect(() => {
-        const simulateKeyPress = (): void => {
-            // Création d'un événement clavier simulé
-            const keyEvent = new KeyboardEvent("keydown", {
-                key: " ", // Touche espace
-                code: "Space",
-                keyCode: 32, // Code ASCII pour la touche espace
-                bubbles: true,
-                cancelable: true,
-            });
-
-            // Déclencher l'événement sur le document
-            document.body.dispatchEvent(keyEvent);
-
-            // Tentative d'activer le son après la simulation
-            setTimeout(() => {
-                if (playerRef.current) {
-                    //  @typescript-eslint/no-explicit-any
-                    const internalPlayer = playerRef.current.getInternalPlayer();
-                    if (internalPlayer && typeof internalPlayer.unMute === "function") {
-                        internalPlayer.unMute(); // Désactive le mute
-                    }
-                }
-            }, 1000);
-        };
-
-        // Simule l'appui sur une touche après un délai
-        setTimeout(simulateKeyPress, 1000);
-    }, []);
-
-    if (!artwork)
-        return;
-
+  const Loader = () => {
     return (
-        <div className="min-h-screen bg-white text-dark relative">
-            <main className="py-32 px-6 md:px-12 max-w-6xl mx-auto text-center" ref={contentRef}>
-                <h2 className="opacity-0 animate-fade-in text-center uppercase text-[75px] mb-0">{artwork.title}</h2>
-                <h3 className="opacity-0 animate-fade-in text-center uppercase text-xxl taviraj italic">{artwork.frequency}</h3>
-                <p className="opacity-0 animate-fade-in text-xl uppercase mb-0">{artwork.size} - {artwork.paintType}</p>
+      <div>
+        <div className='overflow-hidden'>
+          <div className='fixed inset-0 z-40 flex h-full w-full items-center justify-center'>
+            <img
+              src={artwork.image}
+              alt={artwork.title}
+              className='animate-fade-in mx-auto w-full max-w-2xl object-cover transition-transform duration-700 lg:mb-4'
+            />
+          </div>
 
-                <div className="relative">
-
-                    <div className="space-y-24">
-                        <div
-                            id={`artwork-${artwork.id}`}
-                            className={`artwork-section gap-8 md:gap-24 items-start transition-all duration-1000 
-                                // transform${visibleSections[`artwork-${artwork}`]
-                                ? 'opacity-100 translate-y-0'
-                                : 'opacity-0 translate-y-10'}`}
-                        >
-                            <div className="w-full overflow-hidden">
-                                <img
-                                    src={artwork.image}
-                                    alt={artwork.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 max-w-xxl max-h-xxl mx-auto mb-12"
-                                />
-                            </div>
-
-                            <div className="md:w-[70%] mx-auto">
-                                {artwork.description.map((desc, index) => (
-                                    <p key={index}
-                                       className="opacity-0 animate-fade-in text-lg text-left mt-0 text-gray-500">{desc}</p>
-                                ))}
-
-                                <h4 className="opacity-0 animate-fade-in text-left uppercase text-xl mt-16">
-                                    {artwork.subTitle}
-                                </h4>
-                                {artwork.subDescription.map((subDesc, index) => (
-                                    <p key={`subDescription-${index}`}
-                                       className="opacity-0 animate-fade-in text-lg text-left mt-0 text-gray-500">{subDesc}</p>
-                                ))}
-                                {/*<audio*/}
-                                {/*    ref={audioRef}*/}
-                                {/*    src="/musics/Radiohead%20-%20Nude.mp3" // Remplacez par votre URL audio*/}
-                                {/*    autoPlay*/}
-                                {/*    loop*/}
-                                {/*/>*/}
-                                {/*<ReactPlayer*/}
-                                {/*    url={artwork.youtubeLink} // Remplacez par votre URL*/}
-                                {/*    playing={true} // Autoplay activé*/}
-                                {/*    loop={true} // Lecture en boucle*/}
-                                {/*    controls={true} // Cache les contrôles*/}
-                                {/*    volume={1} // Volume ajusté*/}
-                                {/*    muted={muted} // Non muet*/}
-                                {/*    // onDuration={duration => {*/}
-                                {/*    //     console.log('duration', duration);*/}
-                                {/*    //     if (duration === 2) {*/}
-                                {/*    //         setMuted(false)*/}
-                                {/*    //     }*/}
-                                {/*    // }}*/}
-                                {/*    // onUnstarted={() => setTimeout(() => setMuted(false), 1000)}*/}
-                                {/*    onPlay={() => setMuted(false)}*/}
-                                {/*    // style={{ display: 'none' }} // Cache la vidéo*/}
-                                {/*/>*/}
-                                <ReactPlayer
-                                    ref={playerRef}
-                                    url={artwork.youtubeLink}
-                                    playing={true}
-                                    loop={true}
-                                    controls={false}
-                                    volume={0.5}
-                                    muted={true} // Non muet
-                                    // onPlay={() => {
-                                    //     simulateKeyPress();
-                                    //     setTimeout(() => {
-                                    //         setMuted(false)
-                                    //     }, 1000)
-                                    // }}
-                                    // style={{ display: 'none' }} // Cache la vidéo
-                                />
-                                <p className="opacity-0 animate-fade-in text-left uppercase text-center mt-16">
-                                    Pour la suite de la visite, approchez-vous du tableau suivant.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <style jsx global>{`
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-
-                .animate-fade-in {
-                    animation: fadeIn 1s ease-out forwards;
-                }
-            `}</style>
+          <div className='fixed inset-0 z-40 flex h-full w-full items-center justify-center'>
+            <button
+              type='button'
+              onClick={() => setIsLoaded(true)}
+              className='animate-fade-in h-16 w-16 rounded-lg bg-white/75 p-2 text-dark'
+            >
+              <IoPlay className='mx-auto h-8 w-8' />
+            </button>
+          </div>
         </div>
+      </div>
     );
+  };
+
+  return (
+    <div className='relative min-h-screen bg-white text-dark'>
+      <main className='mx-auto max-w-6xl py-32 text-center' ref={contentRef}>
+        {!isLoaded ? (
+          <Loader />
+        ) : (
+          <div>
+            <AudioPlayer audioSrc={'/musics/Radiohead - Nude.mp3'} />
+            <h2 className='animate-fade-in mb-0 text-center text-5xl uppercase opacity-0 md:text-7xl'>
+              {artwork.title}
+            </h2>
+            <h3 className='animate-fade-in taviraj text-center text-3xl uppercase italic opacity-0 md:text-5xl'>
+              {artwork.frequency}
+            </h3>
+            <p className='animate-fade-in mb-0 block text-lg uppercase opacity-0 md:text-2xl lg:hidden'>
+              {artwork.size}
+              <br /> {artwork.paintType}
+            </p>
+
+            <div className='relative'>
+              <div className='space-y-24'>
+                <div className='artwork-section mt-8 items-start gap-8 transition-all duration-1000 md:gap-12 lg:flex'>
+                  <div className='w-full overflow-hidden lg:sticky lg:top-24 lg:w-1/2'>
+                    <img
+                      src={artwork.image}
+                      alt={artwork.title}
+                      className='animate-fade-in max-h-4xl mx-auto mb-12 h-full w-full max-w-4xl object-cover opacity-0 transition-transform duration-700 lg:mb-4'
+                    />
+                    <p className='animate-fade-in mb-12 hidden text-xl uppercase opacity-0 lg:block'>
+                      {artwork.size} - {artwork.paintType}
+                    </p>
+                  </div>
+
+                  <div className='mx-auto lg:w-1/2'>
+                    {artwork.description.map((desc, index) => (
+                      <p
+                        key={index}
+                        className='animate-fade-in mt-0 text-left text-lg text-gray-500 opacity-0'
+                      >
+                        {desc}
+                      </p>
+                    ))}
+
+                    <h4 className='animate-fade-in mt-16 text-left text-xl uppercase opacity-0'>
+                      {artwork.subTitle}
+                    </h4>
+                    {artwork.subDescription.map((subDesc, index) => (
+                      <p
+                        key={`subDescription-${index}`}
+                        className='animate-fade-in mt-0 text-left text-lg text-gray-500 opacity-0'
+                      >
+                        {subDesc}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+                <p className='animate-fade-in mt-16 text-left text-center uppercase opacity-0'>
+                  Pour la suite de la visite, approchez-vous du tableau suivant.
+                </p>
+                <Link href={`/works/${artwork.id + 1}`}>Next</Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </main>
+
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fadeIn 1s ease-out forwards;
+        }
+      `}</style>
+    </div>
+  );
 };
 
 export default WorkPreview;
