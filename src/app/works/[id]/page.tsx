@@ -6,12 +6,17 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import AudioPlayer from '@/components/AudioPlayer';
 import { IoPlay } from 'react-icons/io5';
+import {
+  LiaLongArrowAltLeftSolid,
+  LiaLongArrowAltRightSolid,
+} from 'react-icons/lia';
 
 const WorkPreview = () => {
   const contentRef = useRef<HTMLDivElement>(null);
   const { id } = useParams<{ id: string }>();
 
   const artwork = artworks.find((art) => art.id.toString() === id);
+  const currentIndex = artworks.findIndex((art) => art.id.toString() === id);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
@@ -44,23 +49,25 @@ const WorkPreview = () => {
     return (
       <div>
         <div className='overflow-hidden'>
-          <div className='fixed inset-0 z-40 flex h-full w-full items-center justify-center'>
-            <img
-              src={artwork.image}
-              alt={artwork.title}
-              className='animate-fade-in mx-auto w-full max-w-2xl object-cover transition-transform duration-700 lg:mb-4'
-            />
-          </div>
+          <button
+            type='button'
+            onClick={() => setIsLoaded(true)}
+            className='pointer'
+          >
+            <div className='fixed inset-0 z-30 flex h-full w-full items-center justify-center'>
+              <img
+                src={artwork.image}
+                alt={artwork.title}
+                className='animate-fade-in mx-auto w-full max-w-2xl object-cover transition-transform duration-700 lg:mb-4'
+              />
+            </div>
 
-          <div className='fixed inset-0 z-40 flex h-full w-full items-center justify-center'>
-            <button
-              type='button'
-              onClick={() => setIsLoaded(true)}
-              className='animate-fade-in h-16 w-16 rounded-lg bg-white/75 p-2 text-dark'
-            >
-              <IoPlay className='mx-auto h-8 w-8' />
-            </button>
-          </div>
+            <div className='fixed inset-0 z-30 flex h-full w-full items-center justify-center'>
+              <div className='animate-fade-in inline-flex h-16 w-16 items-center justify-center rounded-lg bg-white/75 p-2 text-dark'>
+                <IoPlay className='mx-auto h-8 w-8' />
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     );
@@ -73,7 +80,7 @@ const WorkPreview = () => {
           <Loader />
         ) : (
           <div>
-            <AudioPlayer audioSrc={'/musics/Radiohead - Nude.mp3'} />
+            <AudioPlayer audioSrc={artwork.audioPath} />
             <h2 className='animate-fade-in mb-0 text-center text-5xl uppercase opacity-0 md:text-7xl'>
               {artwork.title}
             </h2>
@@ -109,7 +116,12 @@ const WorkPreview = () => {
                       </p>
                     ))}
 
-                    <h4 className='animate-fade-in mt-16 text-left text-xl uppercase opacity-0'>
+                    <img
+                      src={artwork.subImage}
+                      className='animate-fade-in mb-8 mt-16 opacity-0'
+                      alt=''
+                    />
+                    <h4 className='animate-fade-in text-left text-xl uppercase opacity-0'>
                       {artwork.subTitle}
                     </h4>
                     {artwork.subDescription.map((subDesc, index) => (
@@ -122,10 +134,53 @@ const WorkPreview = () => {
                     ))}
                   </div>
                 </div>
-                <p className='animate-fade-in mt-16 text-left text-center uppercase opacity-0'>
+                <p className='animate-fade-in mt-24 text-left text-center text-xl font-medium uppercase opacity-0'>
                   Pour la suite de la visite, approchez-vous du tableau suivant.
                 </p>
-                <Link href={`/works/${artwork.id + 1}`}>Next</Link>
+                <div className='mx-auto flex max-w-5xl justify-between'>
+                  {(() => {
+                    if (currentIndex > 0) {
+                      return (
+                        <Link
+                          href={`/works/${artwork.id - 1}`}
+                          className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'
+                        >
+                          <img
+                            src={artworks[currentIndex - 1].image}
+                            className='max-w-[100px] md:order-2'
+                            alt=''
+                          />
+                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg'>
+                            <LiaLongArrowAltLeftSolid />
+                            {artworks[currentIndex - 1].title}
+                          </span>
+                        </Link>
+                      );
+                    }
+                    return <div className='ml-auto'></div>;
+                  })()}
+                  {(() => {
+                    if (currentIndex < artworks.length - 1) {
+                      return (
+                        <Link
+                          href={`/works/${artwork.id + 1}`}
+                          className='flex flex-col items-end gap-4 md:flex-row md:items-center md:gap-8'
+                        >
+                          <img
+                            src={artworks[currentIndex + 1].image}
+                            className='max-w-[100px]'
+                            alt=''
+                          />
+                          <span className='inline-flex items-center gap-2 font-medium uppercase md:text-lg'>
+                            {artworks[currentIndex + 1].title}
+                            <LiaLongArrowAltRightSolid />
+                          </span>
+                        </Link>
+                      );
+                    }
+                    return null;
+                  })()}
+                </div>
               </div>
             </div>
           </div>

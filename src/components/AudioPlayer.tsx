@@ -9,32 +9,31 @@ interface AudioPlayerProps {
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true); // Initialise à `true` pour commencer la lecture
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      if (!audioRef.current) return;
-      console.log('audioRef?.current', audioRef?.current);
+    if (!audioRef.current) return;
 
-      if (isPlaying) {
-        audioRef?.current.pause();
-      } else {
-        audioRef.current.play();
-      }
-    }, 500);
+    // Lecture automatique lorsque le composant est monté
+    audioRef.current.play().catch((err) => {
+      console.warn('Erreur lors du démarrage de la lecture automatique:', err);
+    });
+
+    setIsPlaying(true); // Met à jour l'état pour refléter la lecture
   }, []);
 
   // Lecture/Pause
   const togglePlay = () => {
     if (!audioRef.current) return;
-    console.log('audioRef?.current', audioRef?.current);
 
     if (isPlaying) {
-      audioRef?.current.pause();
+      audioRef.current.pause();
     } else {
-      audioRef.current.play();
+      audioRef.current.play().catch((err) => {
+        console.warn('Erreur lors du démarrage de la lecture:', err);
+      });
     }
     setIsPlaying(!isPlaying);
   };
@@ -43,6 +42,15 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
     setCurrentTime(audioRef.current.currentTime);
+  };
+
+  // Permet à l'utilisateur de se déplacer dans la musique
+  const handleSeek = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (!audioRef.current) return;
+
+    const newTime = parseFloat(event.target.value);
+    audioRef.current.currentTime = newTime;
+    setCurrentTime(newTime); // Met à jour la barre pour refléter la position actuelle
   };
 
   // Initialisation des données audio
@@ -65,7 +73,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
 
   return (
     <div>
-      <div className='fixed bottom-0 left-0 right-0 z-50 w-full p-4'>
+      <div className='fixed bottom-0 left-0 right-0 z-50 mx-auto w-full max-w-6xl p-6 xl:px-0'>
         <div className='flex rounded-lg bg-white shadow-xl shadow-black/5 ring-1 ring-slate-700/10'>
           <audio
             ref={audioRef}
@@ -78,7 +86,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
             onClick={togglePlay}
             className='pointer rounded-bl-lg rounded-tl-lg bg-dark p-2 text-light'
           >
-            {!isPlaying ? <IoPauseOutline /> : <IoPlayOutline />}
+            {isPlaying ? <IoPauseOutline /> : <IoPlayOutline />}
           </button>
           <div className='flex flex-auto items-center border-l border-slate-200/60 pl-6 pr-4 text-[0.8125rem]/5 text-slate-700'>
             <div className='w-6'>
@@ -87,15 +95,31 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
                 .toString()
                 .padStart(2, '0')}
             </div>
-            <div className='ml-4 flex flex-auto rounded-full bg-slate-100'>
-              <div
-                className={`h-1 flex-none rounded-l-full rounded-r-[1px] bg-dark`}
-                style={{
-                  width: `${((currentTime / duration) * 100).toFixed(4)}%`,
-                }}
-              ></div>
-              <div className='-my-[0.3125rem] ml-0.5 h-3.5 w-1 rounded-full bg-dark'></div>
+
+            {/* Barre de progression interactive avec style */}
+            <div className='ml-4 flex flex-auto items-center'>
+              <div className='relative w-full'>
+                <div
+                  className='absolute left-0 top-[10px] z-[51] h-1 rounded-full bg-dark'
+                  style={{
+                    width: `${((currentTime / duration) * 100).toFixed(4)}%`,
+                  }}
+                ></div>
+                <input
+                  type='range'
+                  min='0'
+                  max={duration.toString()}
+                  step='0.1'
+                  value={currentTime}
+                  onChange={handleSeek}
+                  className='relative h-1 w-full cursor-pointer appearance-none bg-slate-100'
+                  style={{
+                    accentColor: 'transparent', // Cache le style natif du curseur
+                  }}
+                />
+              </div>
             </div>
+
             <div className='ml-4'>
               {Math.floor(duration / 60)}:
               {Math.floor(duration % 60)
@@ -105,6 +129,38 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
           </div>
         </div>
       </div>
+      <style jsx>{`
+        input[type='range']::-webkit-slider-thumb {
+          appearance: none;
+          width: 4px;
+          height: 16px;
+          border-radius: 2px;
+          background-color: #121211;
+          z-index: 52;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type='range']::-moz-range-thumb {
+          width: 4px;
+          height: 16px;
+          border-radius: 2px;
+          background-color: #121211;
+          z-index: 52;
+          cursor: pointer;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type='range']::-ms-thumb {
+          width: 4px;
+          height: 16px;
+          border-radius: 2px;
+          background-color: #121211;
+          cursor: pointer;
+          z-index: 52;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+      `}</style>
     </div>
   );
 };

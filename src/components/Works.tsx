@@ -11,23 +11,21 @@ interface VisibleSections {
 const Works = () => {
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [visibleSections, setVisibleSections] = useState<VisibleSections>({});
-  const progressRef = useRef<number>(0);
   const rafRef = useRef<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   const smoothProgress = (targetProgress: number): void => {
-    progressRef.current = progressRef.current || 0;
+    const currentProgress = scrollProgress;
 
     const animate = (): void => {
-      const diff = targetProgress - progressRef.current;
+      const diff = targetProgress - currentProgress;
       const speed = 0.1;
 
       if (Math.abs(diff) > 0.1) {
-        progressRef.current += diff * speed;
-        setScrollProgress(progressRef.current);
+        const updatedProgress = currentProgress + diff * speed;
+        setScrollProgress(updatedProgress);
         rafRef.current = requestAnimationFrame(animate);
       } else {
-        progressRef.current = targetProgress;
         setScrollProgress(targetProgress);
       }
     };
@@ -40,26 +38,20 @@ const Works = () => {
   };
 
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = 'smooth';
-
     const handleScroll = (): void => {
       if (!contentRef.current) return;
 
-      const contentTop = contentRef.current.offsetTop;
-      const contentHeight = contentRef.current.scrollHeight;
-      const scrollTop = window.scrollY - contentTop;
-      const viewportHeight = window.innerHeight;
+      const content = contentRef.current;
+      const contentTop = content.offsetTop;
+      const contentHeight = content.offsetHeight;
+      const scrollTop = window.scrollY;
 
-      // Calculate progress only after the title
-      if (scrollTop < 0) {
-        smoothProgress(0);
-      } else {
-        const scrollPercent = Math.min(
-          (scrollTop / (contentHeight - viewportHeight)) * 100,
-          100
-        );
-        smoothProgress(scrollPercent);
-      }
+      // Progression basée sur la hauteur de `contentRef`
+      const progress =
+        ((scrollTop - contentTop) / (contentHeight - window.innerHeight)) * 100;
+
+      // Contrainte entre 0% et 100%
+      smoothProgress(Math.min(Math.max(progress, 0), 100));
 
       const sections =
         document.querySelectorAll<HTMLElement>('.artwork-section');
@@ -78,7 +70,6 @@ const Works = () => {
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      document.documentElement.style.scrollBehavior = 'auto';
       if (rafRef.current) {
         cancelAnimationFrame(rafRef.current);
       }
@@ -91,6 +82,7 @@ const Works = () => {
         <h2 className='animate-fade-in mb-16 text-center opacity-0'>WORKS</h2>
 
         <div className='relative'>
+          {/* Barre de progression */}
           <div className='absolute left-1/2 top-0 h-full w-px bg-gray-200'>
             <div
               className='w-px origin-top transform bg-dark transition-transform duration-100 ease-out'

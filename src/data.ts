@@ -4,11 +4,12 @@ export interface Artwork {
   frequency: string;
   size: string;
   image: string;
+  subImage: string;
   paintType: PaintType;
   description: string[];
   subTitle: string;
   subDescription: string[];
-  youtubeLink: string;
+  audioPath: string;
 }
 
 enum PaintType {
@@ -41,8 +42,9 @@ export const artworks: Artwork[] = [
         'résonance. Cette exposition invite à découvrir sa quête de la fréquence universelle, une énergie\n' +
         'qui relie chaque être vivant et dépasse les limites du visible pour révéler les mystères de la vie.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=j-xoEdtHgJ8&ab_channel=DeveloppementPerso',
+    subImage: '/paintings/heart-activation-image.png',
+    audioPath:
+      '/musics/963 Hz éveil de lintuition et activation de la glande pinéale.mp3',
   },
   {
     id: 2,
@@ -77,8 +79,8 @@ export const artworks: Artwork[] = [
         'devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir\n' +
         'la vie au-delà du tangible.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=BbWBRnDK_AE&ab_channel=Radiohead',
+    subImage: '/paintings/babylon-image.png',
+    audioPath: '/musics/Radiohead - Nude.mp3',
   },
   {
     id: 3,
@@ -113,8 +115,8 @@ export const artworks: Artwork[] = [
         'devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir\n' +
         'la vie au-delà du tangible.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=BbWBRnDK_AE&ab_channel=Radiohead',
+    subImage: '/paintings/babylon-image.png',
+    audioPath: '/musics/Radiohead - Nude.mp3',
   },
   {
     id: 4,
@@ -149,8 +151,8 @@ export const artworks: Artwork[] = [
         'devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir\n' +
         'la vie au-delà du tangible.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=BbWBRnDK_AE&ab_channel=Radiohead',
+    subImage: '/paintings/babylon-image.png',
+    audioPath: '/musics/Radiohead - Nude.mp3',
   },
   {
     id: 5,
@@ -185,8 +187,8 @@ export const artworks: Artwork[] = [
         'devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir\n' +
         'la vie au-delà du tangible.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=BbWBRnDK_AE&ab_channel=Radiohead',
+    subImage: '/paintings/babylon-image.png',
+    audioPath: '/musics/Radiohead - Nude.mp3',
   },
   {
     id: 6,
@@ -221,7 +223,7 @@ export const artworks: Artwork[] = [
         'devient un pont vers un monde vibrant, où les sons et les nuances fusionnent dans une invitation à ressentir\n' +
         'la vie au-delà du tangible.',
     ],
-    youtubeLink:
-      'https://www.youtube.com/watch?v=BbWBRnDK_AE&ab_channel=Radiohead',
+    subImage: '/paintings/babylon-image.png',
+    audioPath: '/musics/Radiohead - Nude.mp3',
   },
 ];

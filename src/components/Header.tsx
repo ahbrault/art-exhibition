@@ -22,27 +22,27 @@ export default function Header() {
           <div className='h-0.5 w-6 bg-dark'></div>
           <div className='h-0.5 w-6 bg-dark'></div>
         </button>
-        <ul
-          className={`${
-            isOpen ? 'block' : 'hidden'
-          } space-x-6 transition-all duration-300`}
-        >
-          <li>
-            <a href='#home' className='hover:text-border'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a href='#about' className='hover:text-border'>
-              About
-            </a>
-          </li>
-          <li>
-            <a href='#contact' className='hover:text-border'>
-              Contact
-            </a>
-          </li>
-        </ul>
+        {/*<ul*/}
+        {/*  className={`${*/}
+        {/*    isOpen ? 'block' : 'hidden'*/}
+        {/*  } space-x-6 transition-all duration-300`}*/}
+        {/*>*/}
+        {/*  <li>*/}
+        {/*    <a href='#home' className='hover:text-border'>*/}
+        {/*      Home*/}
+        {/*    </a>*/}
+        {/*  </li>*/}
+        {/*  <li>*/}
+        {/*    <a href='#about' className='hover:text-border'>*/}
+        {/*      About*/}
+        {/*    </a>*/}
+        {/*  </li>*/}
+        {/*  <li>*/}
+        {/*    <a href='#contact' className='hover:text-border'>*/}
+        {/*      Contact*/}
+        {/*    </a>*/}
+        {/*  </li>*/}
+        {/*</ul>*/}
       </nav>
     </header>
   );

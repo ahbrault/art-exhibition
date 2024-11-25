@@ -32,8 +32,8 @@ export default function Hero() {
       </div>
 
       <div className='animate-fade-in mx-auto md:max-w-[80%]'>
-        <p className='animate-fade-in font-semi mb-24 text-center text-xl italic md:mt-64'>
-          Explorez les œuvres de Jean Marc Larhantec d&#39;une manière inédite !
+        <p className='animate-fade-in mb-24 text-center text-xl font-medium italic md:mt-64'>
+          Explorez les œuvres de Jean Marc Larhantec d&#39;une manière inédite !{' '}
         </p>
         <p className='animate-fade-in text-xl'>
           En approchant votre téléphone portable de chaque tableau, une
