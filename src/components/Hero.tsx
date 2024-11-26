@@ -21,13 +21,13 @@ export default function Hero() {
                 src='/frequences.webp'
                 width={400}
                 height={600}
-                className='animate-fade-in md:max-h-sm h-full max-h-[70%] w-full max-w-[70%] object-cover md:ml-auto md:max-w-sm'
+                className='animate-fade-in h-full max-h-96 w-auto md:ml-auto md:max-h-full md:w-full object-cover md:max-w-sm'
                 alt='Fréquences exhibition'
                 priority={true}
               />
             </div>
 
-            <div className='animate-fade-in order-2 md:order-1 md:w-1/2'>
+            <div className='animate-fade-in order-2 w-full md:order-1 md:w-1/2'>
               <h1 className='uppercas mb-4'>JEAN MARC LARHANTEC</h1>
               <h2 className='taviraj mb-2 text-2xl italic'>
                 AU DOMAINE DE TROPLONG MONDOT
