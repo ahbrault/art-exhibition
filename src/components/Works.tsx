@@ -109,7 +109,7 @@ const Works = () => {
               }`}
             >
               <div className='w-1/2 overflow-hidden'>
-                <Link href={`/works/${artwork.id}`}>
+                <Link href={`/works/${artwork.slug}`}>
                   <Image
                     src={artwork.image}
                     alt={artwork.title}
@@ -120,7 +120,7 @@ const Works = () => {
                 </Link>
               </div>
               <div className='w-1/2'>
-                <Link href={`/works/${artwork.id}`}>
+                <Link href={`/works/${artwork.slug}`}>
                   <h3 className='mb-0 text-base font-medium uppercase sm:text-xl'>
                     {artwork.title}
                   </h3>

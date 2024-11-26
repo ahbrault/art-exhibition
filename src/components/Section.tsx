@@ -16,7 +16,9 @@ const Section = React.forwardRef<HTMLDivElement, SectionProps>(
         className='relative min-h-screen bg-white text-dark'
         ref={ref}
       >
-        <div className={`mx-auto max-w-6xl ${padding ? 'py-32' : ''}`}>
+        <div
+          className={`mx-auto max-w-3xl lg:max-w-6xl ${padding ? 'py-32' : ''}`}
+        >
           {children}
         </div>
       </section>

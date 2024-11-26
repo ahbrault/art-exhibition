@@ -88,7 +88,7 @@ export default function Header() {
 
   return (
     <header className='fixed left-0 right-0 top-0 z-40 border bg-light bg-opacity-90 p-6 backdrop-blur-sm transition-all duration-300'>
-      <div className='mx-auto flex max-w-6xl items-center justify-between'>
+      <div className='mx-auto flex max-w-3xl items-center justify-between lg:max-w-6xl'>
         <Link href='/' className='transition-all duration-300 hover:pl-2'>
           <h1 className='mb-0 text-2xl font-light'>JEAN MARC LARHANTEC</h1>
         </Link>

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix scrollbar and add responsiveness">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix add responsiveness for work page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/works/cinema/cinema-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/cinema/cinema-image.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +106,7 @@
       <workItem from="1732526908296" duration="18864000" />
       <workItem from="1732614419413" duration="151000" />
       <workItem from="1732614576705" duration="8577000" />
-      <workItem from="1732632165702" duration="163000" />
+      <workItem from="1732632165702" duration="1579000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -153,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732631246903</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fix add responsiveness for work page">
+      <option name="closed" value="true" />
+      <created>1732632341444</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732632341444</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +177,7 @@
     <MESSAGE value="Add header navigation" />
     <MESSAGE value="Add adjustment to header" />
     <MESSAGE value="Fix scrollbar and add responsiveness" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix scrollbar and add responsiveness" />
+    <MESSAGE value="Fix add responsiveness for work page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix add responsiveness for work page" />
   </component>
 </project>

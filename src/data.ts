@@ -1,6 +1,7 @@
 export interface Artwork {
   id: number;
   title: string;
+  slug: string;
   frequency: string;
   size: string;
   image: string;
@@ -22,6 +23,7 @@ export const artworks: Artwork[] = [
   {
     id: 1,
     title: 'Heart Activation',
+    slug: 'heart-activation',
     frequency: '(963 Hz)',
     size: '200 x 125',
     paintType: PaintType.AcryliqueModelingPaste,
@@ -40,6 +42,7 @@ export const artworks: Artwork[] = [
   {
     id: 2,
     title: 'Babylon',
+    slug: 'babylon',
     frequency: '(329 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -61,6 +64,7 @@ export const artworks: Artwork[] = [
   {
     id: 3,
     title: 'My Girl',
+    slug: 'my-girl',
     frequency: '(432 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -82,6 +86,7 @@ export const artworks: Artwork[] = [
   {
     id: 4,
     title: 'Yellow Corner',
+    slug: 'yellow-corner',
     frequency: '(349 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -103,6 +108,7 @@ export const artworks: Artwork[] = [
   {
     id: 5,
     title: 'Black Hole Sun',
+    slug: 'black-hole-sun',
     frequency: '(392 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -125,6 +131,7 @@ export const artworks: Artwork[] = [
   {
     id: 6,
     title: 'South Of Heaven',
+    slug: 'south-of-heaven',
     frequency: '(60 Hz)',
     size: '162 x 130',
     paintType: PaintType.Acrylique,
@@ -144,6 +151,7 @@ export const artworks: Artwork[] = [
   {
     id: 7,
     title: 'Cinema',
+    slug: 'cinema',
     frequency: '(528 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -164,6 +172,7 @@ export const artworks: Artwork[] = [
   {
     id: 8,
     title: 'I Believe In You',
+    slug: 'i-believe-in-you',
     frequency: '(432 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -185,6 +194,7 @@ export const artworks: Artwork[] = [
   {
     id: 9,
     title: 'Transhumance',
+    slug: 'transhumance',
     frequency: '(432 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -206,6 +216,7 @@ export const artworks: Artwork[] = [
   {
     id: 10,
     title: 'Elon is playing with Evil',
+    slug: 'elon-is-playing',
     frequency: '(963 Hz)',
     size: '146 x 114',
     paintType: PaintType.AcryliqueModelingPaste,
@@ -227,6 +238,7 @@ export const artworks: Artwork[] = [
   {
     id: 11,
     title: 'A Fragile Thing',
+    slug: 'a-fragile-thing',
     frequency: '(432 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -248,6 +260,7 @@ export const artworks: Artwork[] = [
   {
     id: 12,
     title: 'I can never say goodbye',
+    slug: 'i-can-never-say-goodbye',
     frequency: '(432 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
@@ -272,11 +285,12 @@ export const artworks: Artwork[] = [
   {
     id: 13,
     title: 'Touch Me I’m Lost',
+    slug: 'touch-me-im-lost',
     frequency: '(880 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,
     description: [
-      'Touch me I\'m lost" est une toile qui vibre au rythme de l’intensité sonore de l’album Goo de Sonic Youth. Réalisée sous l’impulsion créative d’une écoute immersive, l’œuvre capte l’essence de cette chanson, dont la fréquence oscillante semble dialoguer avec le chaos émotionnel. Pour Jean Marc Larhantec, la musique est bien plus qu’une simple inspiration : elle est un outil de résonance, un vecteur d’émotions brutes et universelles.',
+      '"Touch me I\'m lost" est une toile qui vibre au rythme de l’intensité sonore de l’album Goo de Sonic Youth. Réalisée sous l’impulsion créative d’une écoute immersive, l’œuvre capte l’essence de cette chanson, dont la fréquence oscillante semble dialoguer avec le chaos émotionnel. Pour Jean Marc Larhantec, la musique est bien plus qu’une simple inspiration : elle est un outil de résonance, un vecteur d’émotions brutes et universelles.',
       'À travers cette toile, l’artiste traduit non seulement les textures sonores et les distorsions caractéristiques du rock alternatif, mais aussi l’écho d’une histoire personnelle. Lors de la création, Jean Marc pensait à l’un de ses plus proches amis, pris dans les tourments d’une rupture difficile. Les harmonies dissonantes de Sonic Youth, mêlées aux fréquences rugueuses de la guitare, sont devenues un exutoire, une manière de peindre l’indicible.',
       'Dans ce morceau, les guitares saturées de Sonic Youth évoquent des fréquences puissantes et dominantes, telles que 880 Hz, une octave au-dessus de la fréquence de référence musicale (440 Hz). Cette vibration particulière traverse la toile, résonnant dans chaque coup de pinceau comme une onde chargée de tension et de passion.',
       'Dans le travail de Larhantec, la musique occupe une place centrale. Les grands groupes de rock, tels que Sonic Youth, The Cure ou encore Joy Division, marquent une empreinte indélébile sur ses œuvres. Ils ne sont pas seulement des bandes-son mais des catalyseurs, influençant les formes, les lignes et les couleurs. Chaque geste de l’artiste sur la toile peut être vu comme une note, chaque couche comme une vibration.',
@@ -295,6 +309,7 @@ export const artworks: Artwork[] = [
   {
     id: 14,
     title: 'Minotaure',
+    slug: 'minotaure',
     frequency: '(880 Hz)',
     size: '146 x 114',
     paintType: PaintType.Acrylique,

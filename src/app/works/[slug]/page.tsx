@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { artworks } from '@/data';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AudioPlayer from '@/components/AudioPlayer';
 import { IoPlay } from 'react-icons/io5';
@@ -15,18 +15,17 @@ import Section from '@/components/Section';
 
 const WorkPreview = () => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
+  const router = useRouter();
 
-  const artwork = artworks.find((art) => art.id.toString() === id);
-  const currentIndex = artworks.findIndex((art) => art.id.toString() === id);
+  const artwork = artworks.find((art) => art.slug === slug);
+  const currentIndex = artworks.findIndex((art) => art.slug === slug);
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     if (!isLoaded) {
-      const body = document.getElementsByName('body');
-      if (body.length === 1) {
-        body[0].style.overflow = 'hidden';
-      }
+      const body = document.body;
+      body.style.overflow = 'hidden';
     }
   }, [isLoaded]);
 
@@ -43,7 +42,18 @@ const WorkPreview = () => {
     };
   }, [isLoaded]);
 
-  if (!artwork) return;
+  if (!artwork) {
+    setTimeout(() => {
+      router.push('/#works');
+    }, 2000);
+
+    return (
+      <div className='flex h-screen flex-col items-center justify-center'>
+        <p className='text-xl'>Oeuvre non trouvée.</p>
+        <p className='text-sm font-light opacity-50'>Redirection en cours...</p>
+      </div>
+    );
+  }
 
   const Loader = () => {
     return (
@@ -122,7 +132,7 @@ const WorkPreview = () => {
                     alt={artwork.title}
                     height={224}
                     width={550}
-                    className='animate-fade-in mb-8 mt-16 max-h-72 md:max-h-64 w-full object-cover opacity-0'
+                    className='animate-fade-in mb-8 mt-16 max-h-72 w-full object-cover opacity-0 md:max-h-64'
                   />
                   <h4 className='animate-fade-in text-xl uppercase opacity-0'>
                     {artwork.subTitle}
@@ -141,52 +151,44 @@ const WorkPreview = () => {
                 {artwork.nextPaintingText}
               </p>
               <div className='mx-auto flex max-w-5xl justify-between'>
-                {(() => {
-                  if (currentIndex > 0) {
-                    return (
-                      <Link
-                        href={`/works/${artwork.id - 1}`}
-                        className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'
-                      >
-                        <Image
-                          src={artworks[currentIndex - 1].image}
-                          alt={artworks[currentIndex - 1].title}
-                          height={100}
-                          width={150}
-                          className='h-[100px] w-[150px] object-cover md:order-2'
-                        />
-                        <span className='inline-flex items-center gap-2 text-left font-medium uppercase md:text-lg'>
-                          <LiaLongArrowAltLeftSolid />
-                          {artworks[currentIndex - 1].title}
-                        </span>
-                      </Link>
-                    );
-                  }
-                  return <div className='ml-auto'></div>;
-                })()}
-                {(() => {
-                  if (currentIndex < artworks.length - 1) {
-                    return (
-                      <Link
-                        href={`/works/${artwork.id + 1}`}
-                        className='flex flex-col items-end gap-4 md:flex-row md:items-center md:gap-8'
-                      >
-                        <Image
-                          src={artworks[currentIndex + 1].image}
-                          alt={artworks[currentIndex + 1].title}
-                          height={100}
-                          width={150}
-                          className='h-[100px] w-[150px] object-cover'
-                        />
-                        <span className='inline-flex items-center gap-2 text-right font-medium uppercase md:text-lg'>
-                          {artworks[currentIndex + 1].title}
-                          <LiaLongArrowAltRightSolid />
-                        </span>
-                      </Link>
-                    );
-                  }
-                  return null;
-                })()}
+                {currentIndex > 0 ? (
+                  <Link
+                    href={`/works/${artworks[currentIndex - 1].slug}`}
+                    className='flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8'
+                  >
+                    <Image
+                      src={artworks[currentIndex - 1].image}
+                      alt={artworks[currentIndex - 1].title}
+                      height={100}
+                      width={150}
+                      className='h-[100px] w-[150px] object-cover md:order-2'
+                    />
+                    <span className='inline-flex items-center gap-2 text-left font-medium uppercase md:text-lg'>
+                      <LiaLongArrowAltLeftSolid />
+                      {artworks[currentIndex - 1].title}
+                    </span>
+                  </Link>
+                ) : (
+                  <div className='ml-auto'></div>
+                )}
+                {currentIndex < artworks.length - 1 && (
+                  <Link
+                    href={`/works/${artworks[currentIndex + 1].slug}`}
+                    className='flex flex-col items-end gap-4 md:flex-row md:items-center md:gap-8'
+                  >
+                    <Image
+                      src={artworks[currentIndex + 1].image}
+                      alt={artworks[currentIndex + 1].title}
+                      height={100}
+                      width={150}
+                      className='h-[100px] w-[150px] object-cover'
+                    />
+                    <span className='inline-flex items-center gap-2 text-right font-medium uppercase md:text-lg'>
+                      {artworks[currentIndex + 1].title}
+                      <LiaLongArrowAltRightSolid />
+                    </span>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
