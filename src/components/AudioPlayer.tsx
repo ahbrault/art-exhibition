@@ -9,19 +9,50 @@ interface AudioPlayerProps {
 
 const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
 
   useEffect(() => {
-    if (!audioRef.current) return;
+    // Fonction pour gérer les interactions utilisateur
+    const handleUserInteraction = () => {
+      if (audioRef.current && !hasStarted) {
+        audioRef.current
+          .play()
+          .then(() => {
+            setIsPlaying(true);
+            setHasStarted(true);
+          })
+          .catch((err) => {
+            console.warn('Erreur lors du démarrage de la lecture:', err);
+          });
+      }
+    };
 
-    audioRef.current.play().catch((err) => {
-      console.warn('Erreur lors du démarrage de la lecture automatique:', err);
-    });
+    // Fonction de debounce pour le scroll
+    let scrollTimeout: NodeJS.Timeout;
+    const handleScroll = () => {
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        handleUserInteraction();
+      }, 100); // Débounce de 100ms
+    };
 
-    setIsPlaying(true);
-  }, []);
+    // Ajouter des écouteurs d'événements pour différentes interactions utilisateur
+    window.addEventListener('click', handleUserInteraction);
+    window.addEventListener('keydown', handleUserInteraction);
+    window.addEventListener('touchstart', handleUserInteraction);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('click', handleUserInteraction);
+      window.removeEventListener('keydown', handleUserInteraction);
+      window.removeEventListener('touchstart', handleUserInteraction);
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollTimeout) clearTimeout(scrollTimeout);
+    };
+  }, [hasStarted]);
 
   const togglePlay = () => {
     if (!audioRef.current) return;

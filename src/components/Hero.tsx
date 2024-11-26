@@ -30,7 +30,7 @@ export default function Hero() {
 
             <div className='animate-fade-in order-2 w-full text-center md:order-1 md:w-1/2 md:text-left'>
               <h1 className='uppercas mb-4'>JEAN MARC LARHANTEC</h1>
-              <h2 className='mb-2 text-2xl italic'>
+              <h2 className='mb-2 text-2xl'>
                 AU DOMAINE DE TROPLONG MONDOT
               </h2>
 
