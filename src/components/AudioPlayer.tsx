@@ -68,7 +68,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ audioSrc }) => {
 
   return (
     <div>
-      <div className='fixed bottom-0 left-0 right-0 z-50 mx-auto w-full max-w-6xl p-6 xl:px-0'>
+      <div className='fixed bottom-0 left-0 right-0 z-30 mx-auto w-full max-w-6xl p-6 xl:px-0'>
         <div className='flex rounded-lg bg-white shadow-xl shadow-black/5 ring-1 ring-slate-700/10'>
           <audio
             ref={audioRef}

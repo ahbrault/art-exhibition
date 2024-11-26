@@ -1,9 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { IoMdClose } from 'react-icons/io';
 
 interface NavLink {
   name: string;
@@ -14,8 +13,25 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    const main = document.getElementById('main');
+
+    if (isMenuOpen) {
+      main?.classList.add('blur-sm');
+      document.body.style.overflow = 'hidden';
+    } else {
+      main?.classList.remove('blur-sm');
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      main?.classList.remove('blur-sm');
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
 
   const navLinks: NavLink[] = [
     {
@@ -57,7 +73,7 @@ export default function Header() {
       opacity: 1,
       transition: {
         y: { stiffness: 1000, velocity: -100 },
-        opacity: { duration: 0.5 },
+        opacity: { duration: 0.3 },
       },
     },
     closed: {
@@ -65,51 +81,59 @@ export default function Header() {
       opacity: 0,
       transition: {
         y: { stiffness: 1000 },
-        opacity: { duration: 0.5 },
+        opacity: { duration: 0.2 },
       },
     },
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-40 border bg-light bg-opacity-90 p-6 backdrop-blur-sm transition-all duration-300">
-      <div className="mx-auto flex max-w-6xl items-center justify-between">
-        <Link href="/" className="transition-all duration-300 hover:pl-2">
-          <h1 className="mb-0 text-2xl font-light">JEAN MARC LARHANTEC</h1>
+    <header className='fixed left-0 right-0 top-0 z-40 border bg-light bg-opacity-90 p-6 backdrop-blur-sm transition-all duration-300'>
+      <div className='mx-auto flex max-w-6xl items-center justify-between'>
+        <Link href='/' className='transition-all duration-300 hover:pl-2'>
+          <h1 className='mb-0 text-2xl font-light'>JEAN MARC LARHANTEC</h1>
         </Link>
         <button
-          className="space-y-0.5 transition-all duration-300 hover:space-y-1.5 hover:opacity-70"
+          className={`space-y-0.5 transition-all duration-300 hover:space-y-1.5 hover:opacity-70 ${isMenuOpen ? 'hidden' : ''}`}
           onClick={toggleMenu}
-          type="button"
-          aria-label="Toggle menu"
+          type='button'
+          aria-label='Toggle menu'
         >
-          <div className="h-0.5 w-6 bg-dark transition-all duration-300"></div>
-          <div className="h-0.5 w-6 bg-dark transition-all duration-300"></div>
-          <div className="h-0.5 w-6 bg-dark transition-all duration-300"></div>
+          <div className='h-0.5 w-6 bg-dark transition-all duration-300'></div>
+          <div className='h-0.5 w-6 bg-dark transition-all duration-300'></div>
+          <div className='h-0.5 w-6 bg-dark transition-all duration-300'></div>
         </button>
+        <div
+          className={`z-[51] cursor-pointer transition-all duration-300 hover:opacity-70 ${!isMenuOpen ? 'hidden' : ''}`}
+          onClick={toggleMenu}
+          aria-label='Close menu'
+        >
+          <div className='absolute h-0.5 w-6 rotate-45 bg-dark'></div>
+          <div className='relative h-0.5 w-6 -rotate-45 bg-dark'></div>
+        </div>
       </div>
 
       <AnimatePresence>
         {isMenuOpen && (
           <motion.nav
-            className="fixed left-0 top-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-white"
+            className='fixed inset-0 z-50 flex h-screen w-full flex-col items-center justify-center bg-white/90 backdrop-blur-xl'
             variants={menuVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
+            initial='closed'
+            animate='open'
+            exit='closed'
           >
-            <div className="absolute top-10 right-10 cursor-pointer transition-all duration-300 hover:opacity-70">
-              {/*<X size={32} onClick={toggleMenu} />*/}
-              <IoMdClose onClick={toggleMenu} className="h-10 w-10" />
-
-            </div>
             {navLinks.map((navLink) => (
               <motion.div
                 key={`navlink-${navLink.name}`}
-                className="mb-12 text-7xl uppercase transition-all duration-300 hover:opacity-70"
                 variants={linkVariants}
                 onClick={toggleMenu}
+                className='pb-12 transition-transform duration-300'
               >
-                <Link href={navLink.href}>{navLink.name}</Link>
+                <Link
+                  href={navLink.href}
+                  className='block transform text-7xl uppercase transition-transform duration-300 hover:scale-105'
+                >
+                  {navLink.name}
+                </Link>
               </motion.div>
             ))}
           </motion.nav>

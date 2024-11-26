@@ -111,7 +111,6 @@ const Works = () => {
                   <Image
                     src={artwork.image}
                     alt={artwork.title}
-                    layout='responsive'
                     width={450}
                     height={700}
                     className='max-h-md ml-auto h-full w-full max-w-md object-cover transition-transform duration-700 hover:scale-110'

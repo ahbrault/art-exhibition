@@ -23,6 +23,7 @@ export default function Hero() {
                 height={600}
                 className='animate-fade-in md:max-h-sm h-full max-h-[70%] w-full max-w-[70%] object-cover md:ml-auto md:max-w-sm'
                 alt='Fréquences exhibition'
+                priority={true}
               />
             </div>
 
