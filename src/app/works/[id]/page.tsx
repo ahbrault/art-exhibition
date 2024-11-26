@@ -122,7 +122,7 @@ const WorkPreview = () => {
                     alt={artwork.title}
                     height={224}
                     width={550}
-                    className='animate-fade-in mb-8 mt-16 max-h-56 w-full object-cover opacity-0'
+                    className='animate-fade-in mb-8 mt-16 max-h-72 md:max-h-64 w-full object-cover opacity-0'
                   />
                   <h4 className='animate-fade-in text-xl uppercase opacity-0'>
                     {artwork.subTitle}

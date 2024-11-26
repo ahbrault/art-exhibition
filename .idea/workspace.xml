@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add adjustment to header">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix scrollbar and add responsiveness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/works/cinema/cinema-image.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/cinema/cinema-image.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[id]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,22 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/public/works/black-hole-sun",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/node_modules/prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/public/works/black-hole-sun&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/aurelienbrault/WORK/CODE/HETLAND/art-exhibition-site/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -103,7 +102,8 @@
       <workItem from="1732449105318" duration="49361000" />
       <workItem from="1732526908296" duration="18864000" />
       <workItem from="1732614419413" duration="151000" />
-      <workItem from="1732614576705" duration="7780000" />
+      <workItem from="1732614576705" duration="8577000" />
+      <workItem from="1732632165702" duration="163000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -145,7 +145,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732630728023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix scrollbar and add responsiveness">
+      <option name="closed" value="true" />
+      <created>1732631246903</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732631246903</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +165,7 @@
     <MESSAGE value="Add section component for Works" />
     <MESSAGE value="Add header navigation" />
     <MESSAGE value="Add adjustment to header" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add adjustment to header" />
+    <MESSAGE value="Fix scrollbar and add responsiveness" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix scrollbar and add responsiveness" />
   </component>
 </project>
