@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Section from '@/components/Section';
+import AudioPlayer from '@/components/AudioPlayer';
 
 export default function Hero() {
   const handleScrollToSection = () => {
@@ -18,18 +19,18 @@ export default function Hero() {
           <div className='flex flex-col items-center gap-8 py-20 md:flex-row md:py-32'>
             <div className='order-1 w-full md:order-2 md:w-1/2'>
               <Image
-                src='/frequences.webp'
+                src='/frequences-hero.webp'
                 width={400}
                 height={600}
-                className='animate-fade-in h-full max-h-96 w-auto object-cover md:ml-auto md:max-h-full md:w-full md:max-w-sm'
+                className='animate-fade-in mx-auto h-full max-h-96 w-auto object-cover md:ml-auto md:mr-0 md:max-h-full md:w-full md:max-w-sm'
                 alt='Fréquences exhibition'
                 priority={true}
               />
             </div>
 
-            <div className='animate-fade-in order-2 w-full md:order-1 md:w-1/2'>
+            <div className='animate-fade-in order-2 w-full text-center md:order-1 md:w-1/2 md:text-left'>
               <h1 className='uppercas mb-4'>JEAN MARC LARHANTEC</h1>
-              <h2 className='taviraj mb-2 text-2xl italic'>
+              <h2 className='mb-2 text-2xl italic'>
                 AU DOMAINE DE TROPLONG MONDOT
               </h2>
 
@@ -38,6 +39,7 @@ export default function Hero() {
               </h3>
             </div>
           </div>
+          <AudioPlayer audioSrc='/home-music.mp3' />
 
           <div
             className='animate-fade-in absolute left-1/2 -mt-4 hidden w-auto cursor-pointer duration-1000 md:block'
