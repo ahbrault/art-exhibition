@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix add responsiveness for section and header and create a slug management">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add responsiveness for Hero">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +77,11 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/public/works" />
       <recent name="$PROJECT_DIR$/public/resources/yellow-corner" />
       <recent name="$PROJECT_DIR$/public/resources" />
       <recent name="$PROJECT_DIR$/public/resources/my-girl" />
-      <recent name="$PROJECT_DIR$/public/ressources/paintings/heart-activation" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -102,7 +103,7 @@
       <workItem from="1732526908296" duration="18864000" />
       <workItem from="1732614419413" duration="151000" />
       <workItem from="1732614576705" duration="8577000" />
-      <workItem from="1732632165702" duration="2645000" />
+      <workItem from="1732632165702" duration="4850000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -168,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732633977415</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add responsiveness for Hero">
+      <option name="closed" value="true" />
+      <created>1732634878026</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732634878026</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +192,7 @@
     <MESSAGE value="Fix scrollbar and add responsiveness" />
     <MESSAGE value="Fix add responsiveness for work page" />
     <MESSAGE value="Fix add responsiveness for section and header and create a slug management" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix add responsiveness for section and header and create a slug management" />
+    <MESSAGE value="Add responsiveness for Hero" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add responsiveness for Hero" />
   </component>
 </project>
