@@ -79,8 +79,8 @@ const Works = () => {
   }, []);
 
   return (
-    <Section ref={contentRef} padding={false}>
-      <h2 className='animate-fade-in mb-16 text-center opacity-0'>WORKS</h2>
+    <Section ref={contentRef} id="works" padding={false}>
+      <h2 className='animate-fade-in mb-16 text-center opacity-0 pt-32'>WORKS</h2>
 
       <div className='relative'>
         {/* Barre de progression */}
