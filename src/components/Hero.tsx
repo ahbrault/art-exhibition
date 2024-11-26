@@ -21,7 +21,7 @@ export default function Hero() {
                 src='/frequences.webp'
                 width={400}
                 height={600}
-                className='animate-fade-in h-full max-h-96 w-auto md:ml-auto md:max-h-full md:w-full object-cover md:max-w-sm'
+                className='animate-fade-in h-full max-h-96 w-auto object-cover md:ml-auto md:max-h-full md:w-full md:max-w-sm'
                 alt='Fréquences exhibition'
                 priority={true}
               />

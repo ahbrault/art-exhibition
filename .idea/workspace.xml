@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add responsiveness for Hero">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add qrcode generation">
+      <change afterPath="$PROJECT_DIR$/src/app/qr-code-list/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,10 +80,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/works/qr-code-list" />
       <recent name="$PROJECT_DIR$/public/works" />
       <recent name="$PROJECT_DIR$/public/resources/yellow-corner" />
       <recent name="$PROJECT_DIR$/public/resources" />
-      <recent name="$PROJECT_DIR$/public/resources/my-girl" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -103,7 +105,7 @@
       <workItem from="1732526908296" duration="18864000" />
       <workItem from="1732614419413" duration="151000" />
       <workItem from="1732614576705" duration="8577000" />
-      <workItem from="1732632165702" duration="4850000" />
+      <workItem from="1732632165702" duration="8697000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -177,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732634878026</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add favicon">
+      <option name="closed" value="true" />
+      <created>1732637097765</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732637097765</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +203,8 @@
     <MESSAGE value="Fix add responsiveness for work page" />
     <MESSAGE value="Fix add responsiveness for section and header and create a slug management" />
     <MESSAGE value="Add responsiveness for Hero" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add responsiveness for Hero" />
+    <MESSAGE value="Add favicon" />
+    <MESSAGE value="Add qrcode generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add qrcode generation" />
   </component>
 </project>
