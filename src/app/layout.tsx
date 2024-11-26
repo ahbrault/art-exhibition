@@ -18,7 +18,10 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Header />
-        <main className='min-h-screen bg-light px-6 py-12 text-dark transition-all duration-300' id="main">
+        <main
+          className='min-h-screen bg-light px-6 py-12 text-dark transition-all duration-300'
+          id='main'
+        >
           {children}
         </main>
         <Footer />

@@ -48,7 +48,7 @@ const Works = () => {
       const contentHeight = content.offsetHeight;
       const scrollTop = window.scrollY;
 
-      // Progression basée sur la hauteur de `contentRef`
+      // Progression basée sur la hauteur de contentRef
       const progress =
         ((scrollTop - contentTop) / (contentHeight - window.innerHeight)) * 100;
 
@@ -76,15 +76,17 @@ const Works = () => {
         cancelAnimationFrame(rafRef.current);
       }
     };
-  }, []);
+  }, [scrollProgress]);
 
   return (
-    <Section ref={contentRef} id="works" padding={false}>
-      <h2 className='animate-fade-in mb-16 text-center opacity-0 pt-32'>WORKS</h2>
+    <Section ref={contentRef} id='works' padding={false}>
+      <h2 className='animate-fade-in mb-16 pt-32 text-center opacity-0'>
+        WORKS
+      </h2>
 
       <div className='relative'>
         {/* Barre de progression */}
-        <div className='absolute left-1/2 top-0 h-full w-px bg-gray-200'>
+        <div className='absolute left-1/2 top-0 h-full w-px -translate-x-1/2 transform bg-gray-200'>
           <div
             className='w-px origin-top transform bg-dark transition-transform duration-100 ease-out'
             style={{

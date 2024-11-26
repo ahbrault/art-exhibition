@@ -16,7 +16,7 @@ export default function Hero() {
       <div className='relative mx-auto flex flex-col'>
         <div className='min-h-[95vh]'>
           <div className='flex flex-col items-center gap-8 py-20 md:flex-row md:py-32'>
-            <div className='order-1 md:order-2 md:w-1/2'>
+            <div className='order-1 w-full md:order-2 md:w-1/2'>
               <Image
                 src='/frequences.webp'
                 width={400}
