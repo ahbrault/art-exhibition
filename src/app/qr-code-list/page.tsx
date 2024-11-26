@@ -82,7 +82,7 @@ const QrCodeListPage = () => {
         <div className='flex flex-col items-center gap-4'>
           <QRCodeSVG
             id={`qr-code-home`}
-            value="https://frequences.larhantec.fr"
+            value='https://frequences.larhantec.fr'
             size={128}
             bgColor='#ffffff'
             fgColor='#000000'
