@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Prettier">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Fix auto play in player">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AudioPlayer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AudioPlayer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <workItem from="1732526908296" duration="18864000" />
       <workItem from="1732614419413" duration="151000" />
       <workItem from="1732614576705" duration="8577000" />
-      <workItem from="1732632165702" duration="11417000" />
+      <workItem from="1732632165702" duration="12240000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -225,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732643474041</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix auto play in player">
+      <option name="closed" value="true" />
+      <created>1732644146574</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732644146574</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +254,7 @@
     <MESSAGE value="Change url" />
     <MESSAGE value="Add music to home and resize image" />
     <MESSAGE value="Prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prettier" />
+    <MESSAGE value="Fix auto play in player" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix auto play in player" />
   </component>
 </project>
