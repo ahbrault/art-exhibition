@@ -5,11 +5,11 @@ export interface Artwork {
   frequency: string;
   size: string;
   image: string;
-  subImage: string;
+  subImage?: string;
   paintType: PaintType;
   description: string[];
-  subTitle: string;
-  subDescription: string[];
+  subTitle?: string;
+  subDescription?: string[];
   nextPaintingText: string;
   audioPath: string;
 }
@@ -307,6 +307,24 @@ export const artworks: Artwork[] = [
     audioPath: '/works/black-hole-sun/black-hole-sun-music.mp3',
   },
   {
+    id: 14,
+    title: 'Ys, The Lost City',
+    slug: 'ys-the-lost-city',
+    frequency: '(82 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      "Pour créer Ys, The Lost City, Jean Marc Larhantec s'est replongé dans les souvenirs intenses de son enfance en Bretagne, terre de mystères et de légendes. Né à Douarnenez, il passait des heures à marcher avec son père sur le chemin de Ploumarc’h, le long des falaises où la mer semblait murmurer des récits d’un autre temps. Plus tard, à l’aube de sa vie d’adulte, il trouvait l’occasion de partager ces récits en accompagnant des touristes dans la baie de Douarnenez à bord de petits bateaux. Parmi ses histoires préférées figurait celle de la légendaire ville d’Ys, engloutie par les flots.",
+      "La légende d’Ys est l’un des mythes les plus puissants de la culture bretonne. Selon le récit, cette cité, bâtie par le roi Gradlon pour sa fille Dahut, était un joyau de prospérité et de beauté, protégée par une digue. Mais la démesure et l'imprudence de Dahut provoquèrent la colère des dieux, et la ville fut engloutie par une vague dévastatrice. Pour les Bretons, Ys symbolise à la fois la grandeur perdue, le danger de l'excès et la lutte perpétuelle entre l’homme et la mer. Elle incarne des valeurs profondes : l’attachement à ses racines, la mémoire des disparus, et la nécessité de respecter les forces naturelles.",
+      'C’est en écoutant la version acoustique de Everlong des Foo Fighters, une chanson qui mêle passion et mélancolie, que Jean Marc Larhantec a donné vie à Ys, The Lost City. Fait amusant, les Foo Fighters eux-mêmes partagent un goût certain pour les grands vins, notamment le millésime 2017 de Troplong Mondot, liant de manière inattendue l’œuvre à ce cru exceptionnel.',
+      'Sur la toile, on devine la baie de Douarnenez vue du ciel, baignée de nuances aquatiques et d’ombres mystérieuses. La ville d’Ys, chère au cœur de l’artiste, se révèle dans un jeu subtil de textures et de couleurs, entre présence et absence, comme un écho fragile d’une mémoire collective. Cette œuvre est une ode à la Bretagne, à son patrimoine légendaire, mais aussi à l’imaginaire de Jean Marc Larhantec, où se mêlent souvenirs personnels et mythes universels',
+    ],
+    nextPaintingText:
+      'Avancez vers le prochain tableau pour découvrir la suite.',
+    image: '/works/ys-the-lost-city/ys-the-lost-city-paint.webp',
+    audioPath: '/works/ys-the-lost-city/ys-the-lost-city-music.mp3',
+  },
+  {
     id: 15,
     title: 'Touch Me I’m Lost',
     slug: 'touch-me-im-lost',
@@ -329,5 +347,26 @@ export const artworks: Artwork[] = [
     image: '/works/touch-me-im-lost/touch-me-im-lost-paint.webp',
     subImage: '/works/touch-me-im-lost/touch-me-im-lost-image.webp',
     audioPath: '/works/touch-me-im-lost/touch-me-im-lost-music.mp3',
+  },
+  {
+    id: 16,
+    title: 'Oaks',
+    slug: 'oaks',
+    frequency: '(432 Hz)',
+    size: '146 x 114',
+    paintType: PaintType.Acrylique,
+    description: [
+      "Pour clore en beauté l'exposition Fréquences au Domaine de Troplong Mondot, Jean Marc Larhantec a choisi de rendre hommage au Divin — ou plus précisément au vin divin de ce lieu d’exception. Inspiré par les majestueux fûts alignés dans les chais, il a créé Oaks, une œuvre qui célèbre à la fois la matière et l’esprit, la terre et le ciel.",
+      'Lors de sa création, Jean Marc Larhantec s’est laissé emporter par les vibrations profondes des musiques à 432 Hz, une fréquence que l’on dit en harmonie avec la résonance de la Terre. Cette immersion sonore l’a guidée à travers l’essence même du Domaine, où chaque détail raconte une histoire de passion, de patience et de savoir-faire.',
+      'Pour l’artiste, le vin est non seulement le produit de la vigne et du travail des hommes mais il est aussi sublimé par le bois. Les fûts, dans leur simplicité majestueuse, incarnent ce qu’il appelle « l’augmentation du vin », le passage du potentiel brut à l’excellence. Oaks reflète aussi la profonde gratitude de Jean Marc envers Aymeric de Gironde et les équipes du Domaine, dont le dévouement et l’engagement ont été une source d’inspiration constante durant les mois de préparation de cette exposition immersive inédite.',
+    ],
+    nextPaintingText:
+      "Découvrez la suite en vous approchant de l'œuvre suivante.",
+    subDescription: [
+      'Mais Oaks va au-delà du tangible. À travers cette œuvre, Jean Marc Larhantec nous rappelle que la part des anges — cette infime portion de vin qui s’évapore dans les chais — ne disparaît pas vraiment. Elle laisse une trace invisible, une vibration qui résonne éternellement dans les cœurs de ceux qui savent apprécier l’authenticité, l’art et le partage. Ainsi, Oaks devient un écho intemporel de gratitude et de convivialité, à l’image des grands vins de Troplong Mondot.',
+    ],
+    image: '/works/oaks/oaks-paint.webp',
+    subImage: '/works/minotaure/minotaure-image.webp',
+    audioPath: '/works/oaks/oaks-music.mp3',
   },
 ];

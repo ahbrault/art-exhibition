@@ -75,6 +75,7 @@ const WorkPreview = () => {
                 </p>
               ))}
 
+              {artwork?.subImage &&
               <Image
                 src={artwork.subImage}
                 alt={artwork.title}
@@ -82,10 +83,14 @@ const WorkPreview = () => {
                 width={550}
                 className='animate-fade-in mb-8 mt-16 max-h-40 w-full object-cover opacity-0'
               />
+              }
+              {artwork?.subTitle &&
               <h4 className='animate-fade-in text-xl uppercase opacity-0'>
                 {artwork.subTitle}
               </h4>
-              {artwork.subDescription.map((subDesc, index) => (
+              }
+
+              {artwork.subDescription?.map((subDesc, index) => (
                 <p
                   key={`subDescription-${index}`}
                   className='animate-fade-in mt-0 text-lg text-gray-500 opacity-0'

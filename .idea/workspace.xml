@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add auto play on scroll">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Change artworks order">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/works/south-of-heaven/south-of-heaven-paint.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/south-of-heaven/south-of-heaven-paint.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/qr-code-list/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/qr-code-list/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Works.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Works.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +104,9 @@
       <workItem from="1732614419413" duration="151000" />
       <workItem from="1732614576705" duration="8577000" />
       <workItem from="1732632165702" duration="13576000" />
-      <workItem from="1732712040556" duration="6479000" />
+      <workItem from="1732712040556" duration="7905000" />
+      <workItem from="1732784426843" duration="12000" />
+      <workItem from="1732797325278" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -244,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732648949538</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Change artworks order">
+      <option name="closed" value="true" />
+      <created>1732775377497</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732775377497</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +276,7 @@
     <MESSAGE value="Prettier" />
     <MESSAGE value="Fix auto play in player" />
     <MESSAGE value="Add auto play on scroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add auto play on scroll" />
+    <MESSAGE value="Change artworks order" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change artworks order" />
   </component>
 </project>
