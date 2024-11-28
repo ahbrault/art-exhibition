@@ -98,33 +98,35 @@ const QrCodeListPage = () => {
       </div>
 
       {/* QR Codes pour chaque œuvre */}
-      {artworks.map((artwork) => (
-        <div className='mb-12 text-center' key={`qr-code-${artwork.slug}`}>
-          <p className='mb-4 font-semibold'>{artwork.title}</p>
-          <img
-            className='mx-auto mb-4 h-20 w-20 object-cover'
-            src={artwork.image}
-            alt={artwork.title}
-          />
-
-          <div className='flex flex-col items-center gap-4'>
-            <QRCodeSVG
-              id={`qr-code-${artwork.slug}`}
-              value={`https://frequences.larhantec.fr/works/${artwork.slug}`}
-              size={128}
-              bgColor='#ffffff'
-              fgColor='#000000'
-              level='H'
+      {artworks
+        .sort((a, b) => a.id - b.id)
+        .map((artwork) => (
+          <div className='mb-12 text-center' key={`qr-code-${artwork.slug}`}>
+            <p className='mb-4 font-semibold'>{artwork.title}</p>
+            <img
+              className='mx-auto mb-4 h-20 w-20 object-cover'
+              src={artwork.image}
+              alt={artwork.title}
             />
-            <button
-              onClick={() => downloadQrCode(artwork.slug)}
-              className='mt-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50'
-            >
-              Download
-            </button>
+
+            <div className='flex flex-col items-center gap-4'>
+              <QRCodeSVG
+                id={`qr-code-${artwork.slug}`}
+                value={`https://frequences.larhantec.fr/works/${artwork.slug}`}
+                size={128}
+                bgColor='#ffffff'
+                fgColor='#000000'
+                level='H'
+              />
+              <button
+                onClick={() => downloadQrCode(artwork.slug)}
+                className='mt-2 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50'
+              >
+                Download
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 };

@@ -98,37 +98,39 @@ const Works = () => {
         </div>
 
         <div className='space-y-24'>
-          {artworks.map((artwork, index) => (
-            <div
-              key={index}
-              id={`artwork-${index}`}
-              className={`artwork-section flex transform flex-row items-start gap-8 transition-all duration-1000 md:gap-24 ${
-                visibleSections[`artwork-${index}`]
-                  ? 'translate-y-0 opacity-100'
-                  : 'translate-y-10 opacity-0'
-              }`}
-            >
-              <div className='w-1/2 overflow-hidden'>
-                <Link href={`/works/${artwork.slug}`}>
-                  <Image
-                    src={artwork.image}
-                    alt={artwork.title}
-                    width={450}
-                    height={700}
-                    className='max-h-md ml-auto h-full w-full max-w-md object-cover transition-transform duration-700 hover:scale-110'
-                  />
-                </Link>
+          {artworks
+            .sort((a, b) => a.id - b.id)
+            .map((artwork, index) => (
+              <div
+                key={index}
+                id={`artwork-${index}`}
+                className={`artwork-section flex transform flex-row items-start gap-8 transition-all duration-1000 md:gap-24 ${
+                  visibleSections[`artwork-${index}`]
+                    ? 'translate-y-0 opacity-100'
+                    : 'translate-y-10 opacity-0'
+                }`}
+              >
+                <div className='w-1/2 overflow-hidden'>
+                  <Link href={`/works/${artwork.slug}`}>
+                    <Image
+                      src={artwork.image}
+                      alt={artwork.title}
+                      width={450}
+                      height={700}
+                      className='max-h-md ml-auto h-full w-full max-w-md object-cover transition-transform duration-700 hover:scale-110'
+                    />
+                  </Link>
+                </div>
+                <div className='w-1/2'>
+                  <Link href={`/works/${artwork.slug}`}>
+                    <h3 className='mb-0 text-base font-medium uppercase sm:text-xl'>
+                      {artwork.title}
+                    </h3>
+                    <p className='mt-0 text-lg italic'>{artwork.frequency}</p>
+                  </Link>
+                </div>
               </div>
-              <div className='w-1/2'>
-                <Link href={`/works/${artwork.slug}`}>
-                  <h3 className='mb-0 text-base font-medium uppercase sm:text-xl'>
-                    {artwork.title}
-                  </h3>
-                  <p className='mt-0 text-lg italic'>{artwork.frequency}</p>
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </Section>
