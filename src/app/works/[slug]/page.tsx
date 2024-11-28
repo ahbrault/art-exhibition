@@ -75,20 +75,20 @@ const WorkPreview = () => {
                 </p>
               ))}
 
-              {artwork?.subImage &&
-              <Image
-                src={artwork.subImage}
-                alt={artwork.title}
-                height={224}
-                width={550}
-                className='animate-fade-in mb-8 mt-16 max-h-40 w-full object-cover opacity-0'
-              />
-              }
-              {artwork?.subTitle &&
-              <h4 className='animate-fade-in text-xl uppercase opacity-0'>
-                {artwork.subTitle}
-              </h4>
-              }
+              {artwork?.subImage && (
+                <Image
+                  src={artwork.subImage}
+                  alt={artwork.title}
+                  height={224}
+                  width={550}
+                  className='animate-fade-in mb-8 mt-16 max-h-40 w-full object-cover opacity-0'
+                />
+              )}
+              {artwork?.subTitle && (
+                <h4 className='animate-fade-in text-xl uppercase opacity-0'>
+                  {artwork.subTitle}
+                </h4>
+              )}
 
               {artwork.subDescription?.map((subDesc, index) => (
                 <p
@@ -100,9 +100,19 @@ const WorkPreview = () => {
               ))}
             </div>
           </div>
-          <p className='animate-fade-in mt-24 text-center text-xl font-medium uppercase opacity-0'>
-            {artwork.nextPaintingText}
-          </p>
+          {currentIndex === artworks.length - 1 ? (
+            <Image
+              src='/chateau-trolong-mondot.webp'
+              alt='Chateau Trolong Mondot'
+              height={100}
+              width={150}
+              className='mx-auto w-full max-w-72'
+            />
+          ) : (
+            <p className='animate-fade-in mt-24 text-center text-xl font-medium uppercase opacity-0'>
+              {artwork.nextPaintingText}
+            </p>
+          )}
           <div className='mx-auto flex max-w-5xl justify-between'>
             {currentIndex > 0 ? (
               <Link
