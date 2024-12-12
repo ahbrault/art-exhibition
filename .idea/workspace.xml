@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add last artworks">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add chateau picture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/works/transhumance/transhumance-paint.webp" beforeDir="false" afterPath="$PROJECT_DIR$/public/works/transhumance/transhumance-paint.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/works/[slug]/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +104,11 @@
       <workItem from="1732632165702" duration="13576000" />
       <workItem from="1732712040556" duration="7905000" />
       <workItem from="1732784426843" duration="12000" />
-      <workItem from="1732797325278" duration="3293000" />
+      <workItem from="1732797325278" duration="3810000" />
+      <workItem from="1732823571370" duration="1469000" />
+      <workItem from="1733306965621" duration="7000" />
+      <workItem from="1733746537018" duration="2884000" />
+      <workItem from="1734007764542" duration="933000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -260,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732811208392</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Add chateau picture">
+      <option name="closed" value="true" />
+      <created>1732812628252</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732812628252</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +296,7 @@
     <MESSAGE value="Add auto play on scroll" />
     <MESSAGE value="Change artworks order" />
     <MESSAGE value="Add last artworks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add last artworks" />
+    <MESSAGE value="Add chateau picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add chateau picture" />
   </component>
 </project>
