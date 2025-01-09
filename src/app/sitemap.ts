@@ -4,7 +4,7 @@ import { artworks } from '@/data';
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://frequences.larhantec.fr/';
 
-  const staticRoutes = ['/'].map((route) => ({
+  const staticRoutes = [''].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
