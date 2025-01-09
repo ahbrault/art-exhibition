@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Update sitemap">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Update sitemap for images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/sitemap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/sitemap.ts" afterDir="false" />
     </list>
@@ -113,7 +113,7 @@
       <workItem from="1734283159006" duration="2471000" />
       <workItem from="1734464382313" duration="598000" />
       <workItem from="1734515557100" duration="4961000" />
-      <workItem from="1736448499632" duration="1602000" />
+      <workItem from="1736448499632" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -307,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736449079314</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Update sitemap for images">
+      <option name="closed" value="true" />
+      <created>1736450122470</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1736450122470</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,6 +345,7 @@
     <MESSAGE value="Update my girl music" />
     <MESSAGE value="Add sitemap and robots" />
     <MESSAGE value="Update sitemap" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update sitemap" />
+    <MESSAGE value="Update sitemap for images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update sitemap for images" />
   </component>
 </project>

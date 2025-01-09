@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 1,
-    images: ['jml-about.webp'],
+    images: [`${baseUrl}/frequences-hero.webp`],
   }));
 
   const dynamicRoutes = artworks.map((artwork) => ({
