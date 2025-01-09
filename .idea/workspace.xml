@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Add chateau picture">
+    <list default="true" id="f5b7fb62-f54f-4601-ba6c-1aaad5680951" name="Changes" comment="Update my girl music">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +108,11 @@
       <workItem from="1732823571370" duration="1469000" />
       <workItem from="1733306965621" duration="7000" />
       <workItem from="1733746537018" duration="2884000" />
-      <workItem from="1734007764542" duration="933000" />
+      <workItem from="1734007764542" duration="1581000" />
+      <workItem from="1734283159006" duration="2471000" />
+      <workItem from="1734464382313" duration="598000" />
+      <workItem from="1734515557100" duration="4961000" />
+      <workItem from="1736448499632" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Fix css for responsiveness">
       <option name="closed" value="true" />
@@ -270,7 +274,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732812628252</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update my girl music">
+      <option name="closed" value="true" />
+      <created>1734015685724</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1734015685724</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +309,7 @@
     <MESSAGE value="Change artworks order" />
     <MESSAGE value="Add last artworks" />
     <MESSAGE value="Add chateau picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add chateau picture" />
+    <MESSAGE value="Update my girl music" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update my girl music" />
   </component>
 </project>
